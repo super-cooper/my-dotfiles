@@ -1,0 +1,5 @@
+[user]
+	name = super-cooper
+	email = adamcooperrc@gmail.com
+[credential]
+	helper = cache

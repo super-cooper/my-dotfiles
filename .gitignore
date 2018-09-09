@@ -1,0 +1,14 @@
+# config ignores
+.config/Caprine/
+.config/opera/
+.config/Mailspring/
+.config/google-chrome/
+.config/ibus/
+.config/Insync/
+.config/pulse/
+.config/RescueTime.com/
+.config/VirtualBox/
+.config/deluge/
+
+^[^.].+ # No non-dotfiles
+
