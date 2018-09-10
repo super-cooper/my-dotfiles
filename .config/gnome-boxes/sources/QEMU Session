@@ -1,3 +1,5 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c364242cec6a16e663ade322b7a01e1ea4414eb4f1b3645dfab21da65a349ecc
-size 83
+[source]
+name=QEMU Session
+type=libvirt
+uri=qemu+unix:///session
+save-on-quit=true
