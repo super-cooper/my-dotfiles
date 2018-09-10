@@ -112,3 +112,5 @@ export BASH_IT="/home/adam/Code/misc/scripts/.bash_it"
 source "$BASH_IT"/bash_it.sh
 
 export GOPATH=~/.gopath
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
