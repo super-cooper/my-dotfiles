@@ -1,3 +1,3 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:23a5fbdaf1b0c573ff5db11e9364d8114df1a5d5395fd4063887a1b75912ad31
-size 98
+[directory]
+nautilus-list-view-sort-column=search_relevance
+nautilus-list-view-sort-reversed=true
