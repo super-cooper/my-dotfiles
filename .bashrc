@@ -107,7 +107,7 @@ export EDITOR=vim
 export RANGER_LOAD_DEFAULT_RC=false
 
 # Path to the bash it configuration
-export BASH_IT="/home/adam/Code/misc/scripts/.bash_it"
+export BASH_IT="$HOME/Code/misc/scripts/.bash_it"
 
 source "$BASH_IT"/bash_it.sh
 
