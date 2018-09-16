@@ -1,2 +1,5 @@
 set completion-ignore-case on
 set show-all-if-ambiguous on
+
+# cycle through completions
+TAB: menu-complete
