@@ -12,6 +12,8 @@
 
 .ssh/id_rsa
 .ssh/id_rsa.pub
+.ssh/id_dsa
+.ssh/id_dsa.pub
 
 ^[^.].+ # No non-dotfiles
 
