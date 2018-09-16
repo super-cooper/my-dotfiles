@@ -10,5 +10,8 @@
 .config/VirtualBox/
 .config/deluge/
 
+.ssh/id_rsa
+.ssh/id_rsa.pub
+
 ^[^.].+ # No non-dotfiles
 
