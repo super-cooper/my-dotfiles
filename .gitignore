@@ -9,6 +9,8 @@
 .config/RescueTime.com/
 .config/VirtualBox/
 .config/deluge/
+.config/gnome-boxes/
+.config/libreoffice/
 
 .ssh/id_rsa
 .ssh/id_rsa.pub
