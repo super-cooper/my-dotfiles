@@ -18,6 +18,7 @@ if [ -x /usr/bin/dircolors ]; then
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
+    matches () { grep --color -E "$1|$" "${@:1}" ; }
 fi
 
 # some more ls aliases
