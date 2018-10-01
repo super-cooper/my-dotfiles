@@ -11,6 +11,7 @@
 .config/deluge/
 .config/gnome-boxes/
 .config/libreoffice/
+.config/dconf/
 
 .ssh/id_rsa
 .ssh/id_rsa.pub
