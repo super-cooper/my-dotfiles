@@ -1,6 +1,0 @@
-[Desktop Entry]
-Name=Set icons to correct themes
-Comment=
-Exec=iconset.sh
-Terminal=false
-Type=Application
