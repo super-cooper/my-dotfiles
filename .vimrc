@@ -7,8 +7,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 " Enable syntax highlighting with 'ron' theme
 syntax on
 colo ron
-" Make vim recognize .md as Markdown
-au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 
 " Indent
 filetype plugin indent on
