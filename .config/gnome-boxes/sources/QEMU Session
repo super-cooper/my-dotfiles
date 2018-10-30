@@ -4,10 +4,10 @@ type=libvirt
 uri=qemu+unix:///session
 save-on-quit=true
 
-[display 4e2ed984-404a-44d5-95e9-2197922ed724]
-last-seen-name=Kali Lab
-uuid=4e2ed984-404a-44d5-95e9-2197922ed724
-access-last-time=1537394323545059
-access-ntimes=7
-access-total-time=38247
-
+[display 22f7573d-edbd-4fa2-bb1c-b94c3aa38c46]
+last-seen-name=seed
+uuid=22f7573d-edbd-4fa2-bb1c-b94c3aa38c46
+run-in-bg=false
+access-last-time=1540861692118165
+access-ntimes=2
+access-total-time=45
