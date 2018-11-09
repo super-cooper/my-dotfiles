@@ -1,7 +1,9 @@
 #!/bin/bash
 
-# WakaTime bash plugin
-source ~/.wakatime.sh
+if [[ $EUID -ne 0 ]]; then
+    # WakaTime bash plugin
+    source ~/.wakatime.sh
+fi
 # git decorator
 source /usr/lib/git-core/git-sh-prompt
 GIT_PS1_SHOWDIRTYSTATE=1
@@ -29,10 +31,10 @@ shopt -s checkwinsize
 
 # If set, the pattern "**" used in a pathname expansion context will
 # match all files and zero or more directories and subdirectories.
-#shopt -s globstar
+shopt -s globstar
 
 # make less more friendly for non-text input files, see lesspipe(1)
-#[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
@@ -60,11 +62,17 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-# Scripts for git completion
-source ~/.gitcompletion.sh
+if [[ $EUID -ne 0 ]]; then
+    # Scripts for git completion
+    source ~/.gitcompletion.sh
+fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='\[\033[01;32m\]┌────\[\033[00m\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[$(tput setaf 1)\]$(__git_ps1 " (%s)")\n\[\033[01;32m\]└─[\[\033[00m\]\$ '
+    if [[ $EUID -ne 0 ]]; then
+        PS1='\[\033[01;32m\]┌────\[\033[00m\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[$(tput setaf 1)\]$(__git_ps1 " (%s)")\n\[\033[01;32m\]└─[\[\033[00m\]\$ '
+    else
+        PS1='\[\033[01;32m\]┌────\[\033[32m\]${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\u\[\033[32m\]@\h\[\033[00m\]:\[\033[01;34m\]\w\[$(tput setaf 1)\]$(__git_ps1 " (%s)")\n\[\033[01;32m\]└─[\[\033[00m\]\$ '
+    fi
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -104,7 +112,7 @@ fi
 # Environment
 export PROMPT_DIRTRIM=3
 
-export PATH=$PATH:~/anaconda3/bin:/usr/racket/bin:~/Code/misc/scripts:~/.gopath/bin
+export PATH=$PATH:/usr/racket/bin:~/Code/misc/scripts:~/.gopath/bin
 export CLASSPATH=~/Java/lib
 export EDITOR=vim
 export RANGER_LOAD_DEFAULT_RC=false
@@ -112,3 +120,6 @@ export RANGER_LOAD_DEFAULT_RC=false
 export GOPATH=~/.gopath
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# Activate anaconda
+. /home/adam/anaconda3/etc/profile.d/conda.sh
