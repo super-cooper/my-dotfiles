@@ -123,3 +123,4 @@ export GOPATH=~/.gopath
 
 # Activate anaconda
 . /home/adam/anaconda3/etc/profile.d/conda.sh
+eval "$(register-python-argcomplete conda)"
