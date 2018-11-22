@@ -40,6 +40,9 @@ alias ....='cd ../../..' # Go up three directories
 # mkdir fix
 alias mkdir='mkdir -p'
 
+# make xclip do what I want
+alias xclip='xclip -selection clipboard'
+
 # Shortcuts for common dirs
 alias scripts='cd ~/Code/misc/scripts'
 alias dl='cd ~/Downloads'
