@@ -119,7 +119,9 @@ export RANGER_LOAD_DEFAULT_RC=false
 
 export GOPATH=~/.gopath
 
+# fzf goodies
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+[ -f ~/.fzf-marks.bash ] && source ~/.fzf-marks.bash
 
 # Activate anaconda
 . /home/adam/anaconda3/etc/profile.d/conda.sh
