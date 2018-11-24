@@ -1,0 +1,6 @@
+[submodule ".fzf-scripts"]
+	path = .fzf-scripts
+	url = git@github.com:DanielFGray/fzf-scripts.git
+[submodule ".oh-my-zsh"]
+	path = .oh-my-zsh
+	url = git@github.com:robbyrussell/oh-my-zsh.git

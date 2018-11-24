@@ -122,6 +122,10 @@ export GOPATH=~/.gopath
 # fzf goodies
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 [ -f ~/.fzf-marks.bash ] && source ~/.fzf-marks.bash
+if [ -d ~/.fzf-scripts ]; then
+    PATH=$PATH:~/.fzf-scripts
+fi
+[ -f ~/.forgit.sh ] && source ~/.forgit.sh
 
 # Activate anaconda
 . /home/adam/anaconda3/etc/profile.d/conda.sh

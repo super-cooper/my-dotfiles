@@ -4,8 +4,9 @@ alias g=hub
 alias cat=bat
 
 # macros for editing bash configs
-alias reset='source ~/.bashrc'
+alias reset='source ~/.zshrc'
 alias bashrc='vim ~/.bashrc && reset'
+alias zshrc='vim ~/.zshrc && reset'
 alias aliases='vim ~/.bash_aliases && reset'
 
 # enable color support of ls and also add handy aliases
@@ -53,4 +54,7 @@ alias dtf='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 
 # misc
 alias please='sudo $(fc -ln -1)'
-eval $(thefuck --alias --enable-experimental-instant-mode)
+eval "$(thefuck --alias --enable-experimental-instant-mode)"
+
+# Git to fzf replacers 
+alias gitignore=gi
