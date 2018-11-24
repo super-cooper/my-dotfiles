@@ -54,7 +54,7 @@ alias dtf='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 
 # misc
 alias please='sudo $(fc -ln -1)'
-eval "$(thefuck --alias --enable-experimental-instant-mode)"
+eval $(thefuck --alias --enable-experimental-instant-mode)
 
 # Git to fzf replacers 
 alias gitignore=gi
