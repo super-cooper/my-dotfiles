@@ -1,0 +1,3 @@
+/home/adam/anaconda3
+/home/adam/anaconda3/envs/default
+/home/adam/anaconda3/envs/twonote
