@@ -12,6 +12,7 @@
 .config/gnome-boxes/
 .config/libreoffice/
 .config/dconf/
+.config/gnome-boxes/
 
 .ssh/id_rsa
 .ssh/id_rsa.pub
