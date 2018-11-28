@@ -73,9 +73,9 @@ antigen bundle trapd00r/zsh-syntax-highlighting-filetypes
 antigen apply
 
 # fzf goodies
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-if [ -d ~/.fzf-scripts ]; then
-    PATH=$PATH:~/.fzf-scripts
+[ -f /home/adam/.fzf.zsh ] && source /home/adam/.fzf.zsh
+if [ -d /home/adam/.fzf-scripts ]; then
+    PATH=$PATH:/home/adam/.fzf-scripts
 fi
 
 
@@ -91,12 +91,12 @@ else
 fi
 
 # import aliases
-if [ -f ~/.bash_aliases ]; then
-    source ~/.bash_aliases
+if [ -f /home/adam/.bash_aliases ]; then
+    source /home/adam/.bash_aliases
 fi
 
 # other imports
-scrdir=~/Code/misc/scripts/zsh
+scrdir=/home/adam/Code/misc/scripts/zsh
 if [ -d $scrdir ]; then
     for plug in $(ls $scrdir); do
         source $scrdir/$plug
@@ -109,11 +109,11 @@ zmodload -i zsh/complist
 fpath=(/home/adam/.zsh/ $fpath)
 
 # Environment
-export PATH=$PATH:/usr/racket/bin:~/Code/misc/scripts:~/.gopath/bin
-export CLASSPATH=~/Java/lib
+export PATH=$PATH:/usr/racket/bin:/home/adam/Code/misc/scripts:/home/adam/.gopath/bin
+export CLASSPATH=/home/adam/Java/lib
 export EDITOR=vim
 export RANGER_LOAD_DEFAULT_RC=false
-export GOPATH=~/.gopath
+export GOPATH=/home/adam/.gopath
 
 # Activate anaconda
 source /home/adam/anaconda3/etc/profile.d/conda.sh

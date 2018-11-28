@@ -2,7 +2,7 @@
 
 if [[ $EUID -ne 0 ]]; then
     # WakaTime bash plugin
-    source ~/.wakatime.sh
+    source /home/adam/.wakatime.sh
 fi
 # git decorator
 source /usr/lib/git-core/git-sh-prompt
@@ -64,7 +64,7 @@ fi
 
 if [[ $EUID -ne 0 ]]; then
     # Scripts for git completion
-    source ~/.gitcompletion.sh
+    source /home/adam/.gitcompletion.sh
 fi
 
 if [ "$color_prompt" = yes ]; then
@@ -94,8 +94,8 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 export BAT_THEME="TwoDark"
 
 # import bash aliases
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+if [ -f /home/adam/.bash_aliases ]; then
+    . /home/adam/.bash_aliases
 fi
 
 # enable programmable completion features (you don't need to enable
@@ -112,20 +112,20 @@ fi
 # Environment
 export PROMPT_DIRTRIM=3
 
-export PATH=$PATH:/usr/racket/bin:~/Code/misc/scripts:~/.gopath/bin
-export CLASSPATH=~/Java/lib
+export PATH=$PATH:/usr/racket/bin:/home/adam/Code/misc/scripts:/home/adam/.gopath/bin
+export CLASSPATH=/home/adam/Java/lib
 export EDITOR=vim
 export RANGER_LOAD_DEFAULT_RC=false
 
-export GOPATH=~/.gopath
+export GOPATH=/home/adam/.gopath
 
 # fzf goodies
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-[ -f ~/.fzf-marks.bash ] && source ~/.fzf-marks.bash
-if [ -d ~/.fzf-scripts ]; then
-    PATH=$PATH:~/.fzf-scripts
+[ -f /home/adam/.fzf.bash ] && source /home/adam/.fzf.bash
+[ -f /home/adam/.fzf-marks.bash ] && source /home/adam/.fzf-marks.bash
+if [ -d /home/adam/.fzf-scripts ]; then
+    PATH=$PATH:/home/adam/.fzf-scripts
 fi
-[ -f ~/.forgit.sh ] && source ~/.forgit.sh
+[ -f /home/adam/.forgit.sh ] && source /home/adam/.forgit.sh
 
 # Activate anaconda
 . /home/adam/anaconda3/etc/profile.d/conda.sh
