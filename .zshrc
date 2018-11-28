@@ -102,6 +102,11 @@ if [ -d $scrdir ]; then
         source $scrdir/$plug
     done
 fi
+autoload -U compinit && compinit
+zmodload -i zsh/complist
+
+# fpath
+fpath=(/home/adam/.zsh/ $fpath)
 
 # Environment
 export PATH=$PATH:/usr/racket/bin:~/Code/misc/scripts:~/.gopath/bin
