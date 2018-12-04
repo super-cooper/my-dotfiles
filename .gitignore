@@ -19,5 +19,6 @@
 
 .gconf/
 .shodan/
+.wakatime/
 
 ^[^.].+ # No non-dotfiles
