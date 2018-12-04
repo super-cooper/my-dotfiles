@@ -1,6 +1,7 @@
 gdrive : /home/adam/Google Drive
 docs : /home/adam/Documents
 scripts : /home/adam/Code/misc/scripts
-twonote : /home/adam/Code/twonote
 code : /home/adam/Code
 dl : /home/adam/Downloads
+aoc : /home/adam/Code/Advent of Code/2018
+twonote : /home/adam/Code/twonote
