@@ -13,6 +13,7 @@
 .config/libreoffice/
 .config/dconf/
 .config/gnome-boxes/
+.config/obs-studio/
 
 .ssh/id_rsa
 .ssh/id_dsa
