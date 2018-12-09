@@ -1,6 +1,6 @@
 # Program replacements
-alias git=hub
-alias g=hub
+eval $(hub alias -s)
+alias g=git
 alias cat=bat
 
 # macros for editing bash configs
