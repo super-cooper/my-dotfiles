@@ -16,8 +16,8 @@
 .config/obs-studio/
 .config/evolution/
 
-.ssh/id_rsa
-.ssh/id_dsa
+.ssh/id_rsa*
+.ssh/id_dsa*
 
 .gconf/
 .shodan/
