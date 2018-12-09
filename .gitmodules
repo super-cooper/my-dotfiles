@@ -28,3 +28,6 @@
 [submodule ".gdb/dashboard"]
 	path = .gdb/dashboard
 	url = git://github.com/cyrus-and/gdb-dashboard.git
+[submodule ".hub"]
+	path = .hub
+	url = git://github.com/github/hub.git
