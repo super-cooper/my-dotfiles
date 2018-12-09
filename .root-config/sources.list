@@ -1,0 +1,23 @@
+# deb cdrom:[Debian GNU/Linux 9.4.0 _Stretch_ - Official amd64 NETINST 20180310-11:21]/ buster main
+
+# deb cdrom:[Debian GNU/Linux 9.4.0 _Stretch_ - Official amd64 NETINST 20180310-11:21]/ buster main
+
+deb http://ftp.us.debian.org/debian/ buster main
+deb-src http://ftp.us.debian.org/debian/ buster main
+
+deb http://security.debian.org/debian-security buster/updates main contrib non-free
+deb-src http://security.debian.org/debian-security buster/updates main main contrib non-free
+
+# Docker
+deb [arch=amd64] https://download.docker.com/linux/debian buster stable
+
+# Debian 10 "Buster" non-free packages
+deb http://deb.debian.org/debian/ buster main contrib non-free
+
+# Debian unstable packages
+#deb http://ftp.us.debian.org/debian/ sid main
+#deb-src http://ftp.us.debian.org/debian/ sid main
+
+# TOR Browser
+deb https://deb.torproject.org/torproject.org buster main
+deb-src https://deb.torproject.org/torproject.org buster main
