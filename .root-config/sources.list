@@ -13,6 +13,7 @@ deb [arch=amd64] https://download.docker.com/linux/debian buster stable
 
 # Debian 10 "Buster" non-free packages
 deb http://deb.debian.org/debian/ buster main contrib non-free
+deb http://ftp.debian.org/debian/ buster main non-free
 
 # Debian unstable packages
 #deb http://ftp.us.debian.org/debian/ sid main
@@ -21,3 +22,8 @@ deb http://deb.debian.org/debian/ buster main contrib non-free
 # TOR Browser
 deb https://deb.torproject.org/torproject.org buster main
 deb-src https://deb.torproject.org/torproject.org buster main
+
+# VirtualBox
+deb https://download.virtualbox.org/virtualbox/debian buster contrib
+
+
