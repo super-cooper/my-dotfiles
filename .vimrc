@@ -31,3 +31,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'wakatime/vim-wakatime'
 
 call vundle#end()
+
+" Use system clipboard for copy/past
+set clipboard+=unnamed
+
