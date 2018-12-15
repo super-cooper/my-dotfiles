@@ -5,13 +5,14 @@
 	helper = cache
 [alias]
 	co = checkout
-	br = branch
+	b = branch
 	ci = commit
     st = status
     amend = commit --amend
     update-submodules = submodule foreach git pull origin master
 [core]
 	pager = diff-so-fancy | less --tabs=4 -RFX
+	excludesfile = /home/adam/.gitignore-global
 [color]
 	ui = true
 [color "diff-highlight"]
