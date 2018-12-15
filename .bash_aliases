@@ -1,6 +1,5 @@
 # Program replacements
 eval $(hub alias -s)
-alias g=git
 alias cat=bat
 
 # macros for editing bash configs
@@ -52,6 +51,7 @@ alias env-update='dtf fetch && dtf update-submodules'
 # misc
 alias please='sudo $(fc -ln -1)'
 eval $(thefuck --alias --enable-experimental-instant-mode)
+alias emojify=zemojify
 
 # Git to fzf replacers 
 alias gitignore=gi
