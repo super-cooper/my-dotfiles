@@ -96,20 +96,14 @@ if [ -f /home/adam/.bash_aliases ]; then
 fi
 
 # other imports
-scrdir=/home/adam/Code/misc/scripts/zsh
-if [ -d $scrdir ]; then
-    for plug in $(ls $scrdir); do
-        source $scrdir/$plug
-    done
-fi
 autoload -U compinit && compinit
 zmodload -i zsh/complist
 
 # fpath
-fpath=(/home/adam/.zsh/ $fpath)
+fpath=(/home/adam/.zsh/ /home/adam/Code/misc/scripts/zsh $fpath)
 
 # Environment
-export PATH=$PATH:/usr/racket/bin:/home/adam/Code/misc/scripts:/home/adam/.gopath/bin
+export PATH=$PATH:/usr/racket/bin:/home/adam/Code/misc/scripts:/home/adam/.gopath/bin:/home/adam/Code/misc/scripts/zsh/zemojify
 export CLASSPATH=/home/adam/Java/lib
 export EDITOR=vim
 export RANGER_LOAD_DEFAULT_RC=false
