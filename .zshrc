@@ -1,4 +1,3 @@
-# Path to oh-my-zsh installation.
 export ZSH="/home/adam/.oh-my-zsh"
 
 # History tweaks 
@@ -43,7 +42,6 @@ plugins=(
   encode64
   jira
   jsontools
-  npm
   pip
   python
   screen
@@ -70,12 +68,30 @@ antigen apply
 if [ -d /home/adam/.fzf-scripts ]; then
     PATH=$PATH:/home/adam/.fzf-scripts
 fi
-export FZF_DEFAULT_OPTS='--ansi --preview "[[ -d {} ]] && ls --color=always -lh {} || bat --color always --italic-text always --decorations never --pager never --line-range :1000 {}"'
+export FZF_DEFAULT_OPTS='--ansi'
 export FZF_DEFAULT_COMMAND='fdfind --color always --follow'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_CTRL_T_OPTS='--preview "[[ -d {} ]] && ls --color=always -lh {} || bat --color always --italic-text always --decorations never --pager never --line-range :1000 {}"'
 export FZF_ALT_C_COMMAND='fdfind --color always --type d --follow'
+export FZF_ALT_C_OPTS='--preview "ls --color=always -lh {}"'
 export FZF_MARKS_COMMAND=$'fzf --height 40% --reverse --preview "echo {} | cut -d \\  -f3- | tr -d \'\\n\' | xargs -0 ls -lh --color=always"'
-export FZF_COMPLETION_OPTS='--ansi'
+export FZF_COMPLETION_OPTS=$'--preview "\
+    if [[ -d {} ]]; then \
+        ls --color=always -lh {} \
+    elif [[ -f {} ]]; then \
+        bat --color always --italic-text always --decorations never --pager never --line-range :1000 {} \
+    elif [[ -v {} ]]; then \
+        eval \'tmp=\\${}\' \
+        echo $tmp \
+    elif [[ -n $(echo {} | awk \'{ print $2 }\') && -e /proc/$(echo {} | awk \'{ print $2 }\') ]]; then \
+        pstree -sUH $(echo {} | awk \'{ print $2 }\') $(echo {} | awk \'{ print $2 }\') \
+    elif [[ -n $(grep \'Host {}\' $HOME/.ssh/config) ]]; then \
+        start=$(grep -n \'Host {}\' $HOME/.ssh/config | cut -f1 -d:) \
+        bat --color always --italic-text always --decorations never --pager never --line-range $start:$(( $start + 2 )) $HOME/.ssh/config \
+    else \
+        grep "{}" /etc/hosts \
+    fi"'
+
 _fzf_compgen_path() {
   fdfind --hidden --follow --exclude ".git" . "$1" --color always
 }
