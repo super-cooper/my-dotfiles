@@ -70,11 +70,11 @@ antigen apply
 if [ -d /home/adam/.fzf-scripts ]; then
     PATH=$PATH:/home/adam/.fzf-scripts
 fi
-export FZF_DEFAULT_OPTS='--ansi --preview "[[ -d {} ]] && ls --color=always {} || bat --color always --italic-text always --decorations never --pager never --line-range :1000 {}"'
+export FZF_DEFAULT_OPTS='--ansi --preview "[[ -d {} ]] && ls --color=always -lh {} || bat --color always --italic-text always --decorations never --pager never --line-range :1000 {}"'
 export FZF_DEFAULT_COMMAND='fdfind --color always --follow'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND='fdfind --color always --type d --follow'
-export FZF_MARKS_COMMAND=$'fzf --height 40% --reverse --preview "echo {} | cut -d \\  -f3- | tr -d \'\\n\' | xargs -0 ls --color=always"'
+export FZF_MARKS_COMMAND=$'fzf --height 40% --reverse --preview "echo {} | cut -d \\  -f3- | tr -d \'\\n\' | xargs -0 ls -lh --color=always"'
 export FZF_COMPLETION_OPTS='--ansi'
 _fzf_compgen_path() {
   fdfind --hidden --follow --exclude ".git" . "$1" --color always
