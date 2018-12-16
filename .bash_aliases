@@ -1,6 +1,7 @@
 # Program replacements
 eval $(hub alias -s)
 alias cat=bat
+alias find=fdfind
 
 # macros for editing bash configs
 alias reset='source ~/.zshrc'
@@ -11,7 +12,7 @@ alias aliases='vim ~/.bash_aliases && reset'
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
+    alias ls='ls --color=auto -h'
     alias dir='dir --color=auto'
     alias vdir='vdir --color=auto'
 

@@ -3,6 +3,7 @@ export ZSH="/home/adam/.oh-my-zsh"
 
 # History tweaks 
 HISTSIZE=10000000
+
 SAVEHIST=10000000
 
  # Treat the '!' character specially during expansion.
@@ -33,17 +34,9 @@ if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
-# git decorator
-source /usr/lib/git-core/git-sh-prompt
-GIT_PS1_SHOWDIRTYSTATE=1
-
-# Bat theme
-export BAT_THEME="TwoDark"
-
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 plugins=(
-  git-extras
   catimg
   colored-man-pages
   docker
@@ -77,7 +70,27 @@ antigen apply
 if [ -d /home/adam/.fzf-scripts ]; then
     PATH=$PATH:/home/adam/.fzf-scripts
 fi
+export FZF_DEFAULT_OPTS='--ansi --preview "[[ -d {} ]] && ls --color=always {} || bat --color always --italic-text always --decorations never --pager never --line-range :1000 {}"'
+export FZF_DEFAULT_COMMAND='fdfind --color always --follow'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND='fdfind --color always --type d --follow'
+export FZF_MARKS_COMMAND=$'fzf --height 40% --reverse --preview "echo {} | cut -d \\  -f3- | tr -d \'\\n\' | xargs -0 ls --color=always"'
+export FZF_COMPLETION_OPTS='--ansi'
+_fzf_compgen_path() {
+  fdfind --hidden --follow --exclude ".git" . "$1" --color always
+}
+_fzf_compgen_dir() {
+  fdfind --type d --hidden --follow --exclude ".git" . "$1" --color always
+}
 
+# THEME
+
+# git decorator
+source /usr/lib/git-core/git-sh-prompt
+GIT_PS1_SHOWDIRTYSTATE=1
+
+# Bat theme
+export BAT_THEME="TwoDark"
 
 # PS1
 if [[ $EUID -ne 0 ]]; then
