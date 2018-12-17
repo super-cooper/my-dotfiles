@@ -1,5 +1,5 @@
 ﻿###
-###  vlc 3.0.3
+###  vlc 3.0.4
 ###
 
 ###
@@ -279,17 +279,6 @@
 
 # RTSP frame buffer size (integer)
 #rtsp-frame-buffer-size=250000
-
-[smb] # SMB input
-
-# Username (string)
-#smb-user=
-
-# Password (string)
-#smb-pwd=
-
-# SMB domain (string)
-#smb-domain=
 
 [http] # HTTP input
 
@@ -762,6 +751,33 @@
 # Open GL/GLES hardware converter (string)
 #glconv=
 
+# Rendering intent for color conversion (integer)
+#rendering-intent=1
+
+# Display primaries (integer)
+#target-prim=0
+
+# Display gamma / transfer function (integer)
+#target-trc=0
+
+# Tone-mapping algorithm (integer)
+#tone-mapping=3
+
+# Tone-mapping parameter (float)
+#tone-mapping-param=0.000000
+
+# Tone-mapping desaturation coefficient (float)
+#tone-mapping-desat=0.500000
+
+# Highlight clipped pixels (boolean)
+#tone-mapping-warn=0
+
+# Dithering algorithm (integer)
+#dither-algo=-1
+
+# Dither depth override (0 = framebuffer depth) (integer)
+#dither-depth=0
+
 [vmem] # Video memory output
 
 # Width (integer)
@@ -795,6 +811,33 @@
 # Open GL/GLES hardware converter (string)
 #glconv=
 
+# Rendering intent for color conversion (integer)
+#rendering-intent=1
+
+# Display primaries (integer)
+#target-prim=0
+
+# Display gamma / transfer function (integer)
+#target-trc=0
+
+# Tone-mapping algorithm (integer)
+#tone-mapping=3
+
+# Tone-mapping parameter (float)
+#tone-mapping-param=0.000000
+
+# Tone-mapping desaturation coefficient (float)
+#tone-mapping-desat=0.500000
+
+# Highlight clipped pixels (boolean)
+#tone-mapping-warn=0
+
+# Dithering algorithm (integer)
+#dither-algo=-1
+
+# Dither depth override (0 = framebuffer depth) (integer)
+#dither-depth=0
+
 [xcb_x11] # X11 video output (XCB)
 
 [subsusf] # USF subtitles decoder
@@ -806,6 +849,14 @@
 
 # Subtitle justification (integer)
 #ttml-align=0
+
+[aribsub] # ARIB subtitles decoder
+
+# Ignore ruby (furigana) (boolean)
+#aribsub-ignore-ruby=0
+
+# Use Core Text renderer (boolean)
+#aribsub-use-coretext=0
 
 [x264] # H.264/MPEG-4 Part 10/AVC encoder (x264)
 
@@ -1063,7 +1114,7 @@
 [subsdec] # Text subtitle decoder
 
 # Subtitle justification (integer)
-#subsdec-align=0
+#subsdec-align=-1
 
 # Subtitle text encoding (string)
 #subsdec-encoding=
@@ -1356,7 +1407,7 @@
 #sout-avi-subject=
 
 # Encoder (string)
-#sout-avi-encoder=VLC Media Player - 3.0.3 Vetinari
+#sout-avi-encoder=VLC Media Player - 3.0.4 Vetinari
 
 # Keywords (string)
 #sout-avi-keywords=
@@ -1525,7 +1576,7 @@
 #freetype-fontsize=0
 
 # Relative font size (integer)
-#freetype-rel-fontsize=16
+#freetype-rel-fontsize=0
 
 # Text opacity (integer)
 #freetype-opacity=255
@@ -1568,78 +1619,6 @@
 
 # Text direction (integer)
 #freetype-text-direction=0
-
-[glspectrum] # 3D OpenGL spectrum visualization
-
-# Video width (integer)
-#glspectrum-width=400
-
-# Video height (integer)
-#glspectrum-height=300
-
-[visual] # Visualizer filter
-
-# Effects list (string)
-#effect-list=spectrum
-
-# Video width (integer)
-#effect-width=800
-
-# Video height (integer)
-#effect-height=500
-
-# FFT window (string)
-#effect-fft-window=flat
-
-# Kaiser window parameter (float)
-#effect-kaiser-param=3.000000
-
-# Show 80 bands instead of 20 (boolean)
-#visual-80-bands=1
-
-# Draw peaks in the analyzer (boolean)
-#visual-peaks=1
-
-# Enable original graphic spectrum (boolean)
-#spect-show-original=0
-
-# Draw the base of the bands (boolean)
-#spect-show-base=1
-
-# Base pixel radius (integer)
-#spect-radius=42
-
-# Spectral sections (integer)
-#spect-sections=3
-
-# V-plane color (integer)
-#spect-color=80
-
-# Draw bands in the spectrometer (boolean)
-#spect-show-bands=1
-
-# Show 80 bands instead of 20 (boolean)
-#spect-80-bands=1
-
-# Number of blank pixels between bands. (integer)
-#spect-separ=1
-
-# Amplification (integer)
-#spect-amp=8
-
-# Draw peaks in the analyzer (boolean)
-#spect-show-peaks=1
-
-# Peak extra width (integer)
-#spect-peak-width=61
-
-# Peak height (integer)
-#spect-peak-height=1
-
-[notify] # LibNotify Notification Plugin
-
-# Timeout (ms) (integer)
-#notify-timeout=4000
 
 [bluescreen] # Bluescreen video filter
 
@@ -1969,7 +1948,7 @@
 [upnp] # Universal Plug'n'Play
 
 # SAT>IP channel list (string)
-#satip-channelist=ASTRA_19_2E
+#satip-channelist=auto
 
 # Custom SAT>IP channel list URL (string)
 #satip-channellist-url=
@@ -2684,6 +2663,14 @@
 # Dry Mix (float)
 #dry-mix=0.400000
 
+[spatialaudio] # Ambisonics renderer and binauralizer
+
+# Headphones mode (binaural) (boolean)
+#spatialaudio-headphones=0
+
+# HRTF file for the binauralization (string)
+#hrtf-file=
+
 [spatializer] # Audio Spatializer
 
 # Room size (float)
@@ -2700,105 +2687,6 @@
 
 # Damp (float)
 #spatializer-damp=0.500000
-
-[clone] # Clone video filter
-
-# Number of clones (integer)
-#clone-count=2
-
-# Video output modules (string)
-#clone-vout-list=
-
-[wall] # Wall video filter
-
-# Number of columns (integer)
-#wall-cols=3
-
-# Number of rows (integer)
-#wall-rows=3
-
-# Active windows (string)
-#wall-active=
-
-# Element aspect ratio (string)
-#wall-element-aspect=16:9
-
-[panoramix] # Panoramix: wall with overlap video filter
-
-# Number of columns (integer)
-#panoramix-cols=-1
-
-# Number of rows (integer)
-#panoramix-rows=-1
-
-# length of the overlapping area (in %) (integer)
-#panoramix-bz-length=100
-
-# height of the overlapping area (in %) (integer)
-#panoramix-bz-height=100
-
-# Attenuation (boolean)
-#panoramix-attenuate=1
-
-# Attenuation, begin (in %) (integer)
-#panoramix-bz-begin=0
-
-# Attenuation, middle (in %) (integer)
-#panoramix-bz-middle=50
-
-# Attenuation, end (in %) (integer)
-#panoramix-bz-end=100
-
-# middle position (in %) (integer)
-#panoramix-bz-middle-pos=50
-
-# Gamma (Red) correction (float)
-#panoramix-bz-gamma-red=1.000000
-
-# Gamma (Green) correction (float)
-#panoramix-bz-gamma-green=1.000000
-
-# Gamma (Blue) correction (float)
-#panoramix-bz-gamma-blue=1.000000
-
-# Black Crush for Red (integer)
-#panoramix-bz-blackcrush-red=140
-
-# Black Crush for Green (integer)
-#panoramix-bz-blackcrush-green=140
-
-# Black Crush for Blue (integer)
-#panoramix-bz-blackcrush-blue=140
-
-# White Crush for Red (integer)
-#panoramix-bz-whitecrush-red=200
-
-# White Crush for Green (integer)
-#panoramix-bz-whitecrush-green=200
-
-# White Crush for Blue (integer)
-#panoramix-bz-whitecrush-blue=200
-
-# Black Level for Red (integer)
-#panoramix-bz-blacklevel-red=150
-
-# Black Level for Green (integer)
-#panoramix-bz-blacklevel-green=150
-
-# Black Level for Blue (integer)
-#panoramix-bz-blacklevel-blue=150
-
-# White Level for Red (integer)
-#panoramix-bz-whitelevel-red=0
-
-# White Level for Green (integer)
-#panoramix-bz-whitelevel-green=0
-
-# White Level for Blue (integer)
-#panoramix-bz-whitelevel-blue=0
-
-# Active windows (string)
-#panoramix-active=
 
 [file] # Secrets are stored on a file without any encryption
 
@@ -3028,13 +2916,13 @@
 [skins2] # Skinnable Interface
 
 # Skin to use (string)
-#skins2-last=
+skins2-last=/home/adam/.config/vlc/vlc_slim_beam_black_skin_v1.5_by_Diagoo1.vlt
 
 # Config of last used skin (string)
-#skins2-config=
+skins2-config=["Hidden" "Panel_0" 0 0 650 360 0]["MainWindow" "MainFrame" 566 371 650 406 1]["PlaylistIcon" "playlisticon_on" 0 0 650 360 0]["VolumeWindow" "VolumeFrame" 94 365 50 160 0]["color" "color1" 0 0 650 360 0]["customplaylist" "customplaylist_off" 0 0 650 360 0]["fileinfo" "fileinfo_off" 0 0 650 360 0]["fullscreenController" "fswindow" 0 0 650 61 0]["menu" "menu_off" 0 0 1 1 0]["playlist" "playlistframe" 100 100 568 382 0]["playlisticons" "playlisticons_1" 0 0 1 1 0]["popup1" "popup1_off" 0 0 1 1 0]["posbar" "posbar_big" 0 0 1 1 0]["pref" "pr" 94 365 650 360 0]["start" "firststart_yes" 0 0 1 1 0]
 
 # Enable transparency effects (boolean)
-#skins2-transparency=0
+skins2-transparency=1
 
 # Use a skinned playlist (boolean)
 #skinned-playlist=1
@@ -3876,7 +3764,7 @@ qt-privacy-ask=0
 #packetizer=
 
 # VoD server module (string)
-#vod-server=
+vod-server=any
 
 # Use a plugins cache (boolean)
 #plugins-cache=1
@@ -3969,7 +3857,7 @@ metadata-network-access=1
 #pidfile=
 
 # Show advanced options (boolean)
-#advanced=0
+advanced=1
 
 # Interface interaction (boolean)
 #interact=1
@@ -3978,7 +3866,7 @@ metadata-network-access=1
 #stats=1
 
 # Interface module (string)
-#intf=
+intf=skins2,any
 
 # Extra interface modules (string)
 #extraintf=
