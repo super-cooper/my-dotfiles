@@ -31,3 +31,9 @@
 [submodule ".hub"]
 	path = .hub
 	url = git://github.com/github/hub.git
+[submodule ".zsh/zsh-url-highlighter"]
+	path = .zsh/zsh-url-highlighter
+	url = git://github.com/ascii-soup/zsh-url-highlighter.git
+[submodule ".zsh/zsh-_url-httplink"]
+	path = .zsh/zsh-_url-httplink
+	url = git://github.com/Valodim/zsh-_url-httplink.git
