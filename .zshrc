@@ -56,6 +56,9 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 source /usr/share/zsh-antigen/antigen.zsh
 antigen bundle wbingli/zsh-wakatime
+antigen bundle srijanshetty/zsh-pip-completion
+antigen bundle gerges/oh-my-zsh-jira-plus
+antigen bundle RobSis/zsh-completion-generator
 antigen bundle urbainvaes/fzf-marks
 antigen bundle wfxr/forgit
 antigen bundle zdharma/zsh-diff-so-fancy
@@ -99,6 +102,9 @@ _fzf_compgen_path() {
 _fzf_compgen_dir() {
   fdfind --type d --hidden --follow --exclude ".git" . "$1" --color always
 }
+
+# Specify command line syntax highlighters
+export ZSH_HIGHLIGHT_HIGHLIGHTERS=(main pattern brackets cursor line regexp root url)
 
 # THEME
 
