@@ -1,6 +1,6 @@
 # Program replacements
 eval $(hub alias -s)
-alias cat=bat
+alias cat='bat --italic-text=always --decorations=always'
 alias find=fdfind
 
 # macros for editing bash configs

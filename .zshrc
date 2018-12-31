@@ -114,6 +114,7 @@ GIT_PS1_SHOWDIRTYSTATE=1
 
 # Bat theme
 export BAT_THEME="TwoDark"
+export BAT_STYLE=full
 
 # PS1
 if [[ $EUID -ne 0 ]]; then
