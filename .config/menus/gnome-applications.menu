@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<!DOCTYPE Menu
+  PUBLIC '-//freedesktop//DTD Menu 1.0//EN'
+  'http://standards.freedesktop.org/menu-spec/menu-1.0.dtd'>
+<Menu>
+	<Name>Applications</Name>
+	<MergeFile type="parent">/etc/xdg/menus/gnome-applications.menu</MergeFile>
+	<Menu>
+		<Name>Development</Name>
+		<Exclude>
+			<Filename>ocaml.desktop</Filename>
+		</Exclude>
+		<AppDir>/home/adam/.local/share/applications</AppDir>
+	</Menu>
+	<Menu>
+		<Name>Office</Name>
+		<Exclude>
+			<Filename>libreoffice-base.desktop</Filename>
+		</Exclude>
+		<AppDir>/home/adam/.local/share/applications</AppDir>
+	</Menu>
+</Menu>
