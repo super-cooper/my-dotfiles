@@ -33,10 +33,7 @@ u() {
 }
 
 # More cd aliases
-alias ..='cd ..'         # Go up one directory
 alias cd..='cd ..'       # Common misspelling for going up one directory
-alias ...='cd ../..'     # Go up two directories
-alias ....='cd ../../..' # Go up three directories
 
 # mkdir fix
 alias mkdir='mkdir -p'
