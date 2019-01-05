@@ -1,0 +1,9 @@
+[Added Associations]
+application/x-desktop=vim.desktop;
+application/vnd.debian.binary-package=gdebi.desktop;
+
+[Default Applications]
+x-scheme-handler/mailspring=mailspring.desktop
+x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
+text/html=opera.desktop
+x-scheme-handler/webcal=opera.desktop

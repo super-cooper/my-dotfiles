@@ -1,0 +1,13 @@
+(if 
+    (matches (window_name) "DesktopConsole")
+    (begin
+        (pin)
+        (below)
+        (undecorate)
+        (skip_pager)
+        (skip_tasklist)
+        (wintype "desktop")
+        (geometry "+50+50")
+        (geometry "600x400")
+    )
+)
