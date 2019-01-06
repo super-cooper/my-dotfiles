@@ -116,6 +116,9 @@ GIT_PS1_SHOWDIRTYSTATE=1
 export BAT_THEME="TwoDark"
 export BAT_STYLE=full
 
+# ripgrep config
+export RIPGREP_CONFIG_PATH=/home/$USER/.ripgrep
+
 # PS1
 if [[ $EUID -ne 0 ]]; then
     if [[ $JETBRAINS_TERM == 1 ]]; then
