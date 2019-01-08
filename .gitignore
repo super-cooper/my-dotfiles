@@ -1,11 +1,11 @@
 # No non-dotfiles
-*
 !.*
 
 # config ignores
 .config/Atom/
 .config/balena-etcher-electron/
 .config/Caprine/
+!.config/Caprine/custom.css
 .config/configstore/
 .config/dconf/
 .config/deluge/
@@ -47,6 +47,7 @@
 # dirs
 !.local/share/gnome-musc/playlists/
 !.local/share/nautilus/scripts/
+.anaconda3/
 .android/
 .antigen/
 .aqbanking/
