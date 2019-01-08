@@ -1,5 +1,8 @@
 # No non-dotfiles
 !.*
+Code/
+GoogleDrive/
+Downloads/
 
 # config ignores
 .config/Atom/
