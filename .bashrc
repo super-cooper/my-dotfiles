@@ -128,5 +128,5 @@ fi
 [ -f /home/adam/.forgit.sh ] && source /home/adam/.forgit.sh
 
 # Activate anaconda
-. /home/adam/anaconda3/etc/profile.d/conda.sh
+. /home/adam/.anaconda3/etc/profile.d/conda.sh
 eval "$(register-python-argcomplete conda)"

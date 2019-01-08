@@ -114,7 +114,6 @@ GIT_PS1_SHOWDIRTYSTATE=1
 
 # Bat theme
 export BAT_THEME="TwoDark"
-export BAT_STYLE=full
 
 # ripgrep config
 export RIPGREP_CONFIG_PATH=/home/$USER/.ripgrep
@@ -150,7 +149,7 @@ export RANGER_LOAD_DEFAULT_RC=false
 export GOPATH=/home/adam/.gopath
 
 # Activate anaconda
-source /home/adam/anaconda3/etc/profile.d/conda.sh
+source /home/adam/.anaconda3/etc/profile.d/conda.sh
 
 # Bad aliases
 unalias _
