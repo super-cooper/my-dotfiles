@@ -61,7 +61,7 @@ xorg*
 # dirs
 !.local/share/gnome-musc/playlists/
 !.local/share/nautilus/scripts/
-.anaconda3/
+.anaconda3
 .android/
 .antigen/
 .aqbanking/
