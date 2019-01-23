@@ -1,0 +1,84 @@
+wtf:
+  colors:
+    border:
+      focusable: darkslateblue
+      focused: orange
+  grid:
+    columns: [40, 40]
+    rows: [13, 13, 4]
+  refreshInterval: 1
+  mods:
+    git:
+      colors:
+      enabled: true
+      repositories:
+        - "/home/adam/Code/www"
+        - "/home/adam/Code/misc/scripts"
+      position:
+        top: 0
+        left: 0
+        height: 1
+        width: 2
+      refreshInterval: 15
+      sort: "alphabetical"
+    todoist:
+      enabled: true
+      apiKey: "todoist_api"
+      projects:
+        - 2204223629
+      position:
+        top: 1
+        left: 0
+        height: 1
+        width: 2
+      refreshInterval: 60
+    resourceusage:
+      enabled: true
+      position:
+        top: 2
+        left: 0
+        height: 2
+        width: 2
+      refreshInterval: 1
+    prettyweather:
+      enabled: true
+      city: "cleveland"
+      position:
+        top: 2
+        left: 2
+        height: 2
+        width: 2
+      refreshInterval: 3000
+    gcal:
+      enabled: true
+      secretFile: "~/.config/google/credentials/wtfutil/credentials.json"
+      title: "red"
+      description: "lightblue"
+      highlights:
+        past: "gray"
+      displayResponseStatus: true
+      email: "adamcooperrc@gmail.com"
+      eventCount: 2
+      multiCalendar: true
+      showDeclined: true
+      withLocation: true
+      position:
+        top: 0
+        left: 2
+        height: 1
+        width: 2
+      refreshInterval: 30
+    github:
+      enabled: true
+      enableStatus: true
+      username: super-cooper
+      apiKey: "github_api"
+      repositories:
+        Advent-of-Code-2018: "super-cooper"
+        super-cooper.github.io: "super-cooper"
+      position:
+        top: 1
+        left: 2
+        height: 1
+        width: 2
+      refreshInterval: 30
