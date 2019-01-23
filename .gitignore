@@ -38,7 +38,9 @@ xorg*
 .config/eog/
 .config/evolution/
 .config/gedit/
+.config/github/
 .config/gnome-boxes/
+.config/google/
 .config/google-chrome/
 .config/gpick/
 .config/ibus/
@@ -52,6 +54,7 @@ xorg*
 .config/qterminal.org/
 .config/solaar/
 .config/spotify/
+.config/todoist/
 .config/wireshark/
 
 # SSH Keys
@@ -138,6 +141,7 @@ xorg*
 .config/hub
 .config/monitors.xml
 .config/Trolltech.conf
+.config/wtf/gcal-auth.json
 .dmrc
 .gdb_history
 .gksu*
