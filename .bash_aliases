@@ -51,6 +51,9 @@ alias env-update='dtf fetch && dtf pull --rebase && dtf update-submodules && go 
 alias please='sudo $(fc -ln -1)'
 eval $(thefuck --alias --enable-experimental-instant-mode)
 alias emojify=zemojify
+hex() {
+    hexyl $@ | less
+}
 
 # Git to fzf replacers 
 alias gitignore=gi
