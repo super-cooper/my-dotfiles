@@ -12,8 +12,8 @@ wtf:
       colors:
       enabled: true
       repositories:
-        - "/home/adam/Code/www"
-        - "/home/adam/Code/misc/scripts"
+        - "/home/adam/dev/www"
+        - "/home/adam/dev/scripts"
       position:
         top: 0
         left: 0

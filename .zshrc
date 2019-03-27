@@ -140,10 +140,10 @@ autoload -U compinit && compinit
 zmodload -i zsh/complist
 
 # fpath
-fpath=(/home/adam/.zsh/ /home/adam/Code/misc/scripts/zsh $fpath)
+fpath=(/home/adam/.zsh/ /home/adam/dev/scripts/zsh $fpath)
 
 # Environment
-export PATH=$PATH:/usr/racket/bin:/home/adam/Code/misc/scripts:/home/adam/.gopath/bin:/home/adam/Code/misc/scripts/zsh/zemojify:/sbin
+export PATH=$PATH:/usr/racket/bin:/home/adam/dev/scripts:/home/adam/.gopath/bin:/home/adam/dev/scripts/zsh/zemojify:/sbin
 export CLASSPATH=/home/adam/Java/lib
 export EDITOR=vim
 export RANGER_LOAD_DEFAULT_RC=false

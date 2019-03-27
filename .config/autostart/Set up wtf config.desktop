@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Set up wtf config
 Comment=
-Exec=/home/adam/Code/misc/scripts/setup-wtf.sh
+Exec=/home/adam/dev/scripts/setup-wtf.sh
 Terminal=false
 Type=Application

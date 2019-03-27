@@ -112,7 +112,7 @@ fi
 # Environment
 export PROMPT_DIRTRIM=3
 
-export PATH=$PATH:/usr/racket/bin:/home/adam/Code/misc/scripts:/home/adam/.gopath/bin
+export PATH=$PATH:/usr/racket/bin:/home/adam/dev/scripts:/home/adam/.gopath/bin
 export CLASSPATH=/home/adam/Java/lib
 export EDITOR=vim
 export RANGER_LOAD_DEFAULT_RC=false

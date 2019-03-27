@@ -1,7 +1,7 @@
 # No non-dotfiles
 !.*
 Android/
-Code/
+dev/
 Desktop/
 Documents/
 Downloads/

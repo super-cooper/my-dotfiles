@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Set icons to papirus
 Comment=Fix try icon issues
-Exec=/home/adam/Code/misc/scripts/iconset.sh
+Exec=/home/adam/dev/scripts/iconset.sh
 Terminal=false
 Type=Application
