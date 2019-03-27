@@ -140,6 +140,7 @@ xorg*
 .config/gtk-3.0/gtk.css
 .config/hub
 .config/monitors.xml
+.config/qalculate/qalc.history
 .config/Trolltech.conf
 .config/wtf/gcal-auth.json
 .dmrc
