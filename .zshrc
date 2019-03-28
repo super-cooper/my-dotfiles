@@ -64,7 +64,6 @@ antigen bundle wfxr/forgit
 antigen bundle zdharma/zsh-diff-so-fancy
 antigen bundle djui/alias-tips
 antigen bundle zdharma/fast-syntax-highlighting  # MUST BE LAST!
-antigen bundle trapd00r/zsh-syntax-highlighting-filetypes
 antigen apply
 
 # fzf goodies

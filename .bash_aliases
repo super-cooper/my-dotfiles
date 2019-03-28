@@ -54,6 +54,7 @@ alias emojify=zemojify
 hex() {
     hexyl $@ | less
 }
+alias calc=qalc
 
 # Git to fzf replacers 
 alias gitignore=gi
