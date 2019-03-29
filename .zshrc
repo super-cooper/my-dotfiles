@@ -49,12 +49,12 @@ plugins=(
   vagrant
   vscode
   web-search
-  zsh-completions
 )
 
 # Plugin loaders
 source $ZSH/oh-my-zsh.sh
 source /usr/share/zsh-antigen/antigen.zsh
+antigen bundle zsh-users/zsh-completions
 antigen bundle wbingli/zsh-wakatime
 antigen bundle srijanshetty/zsh-pip-completion
 antigen bundle gerges/oh-my-zsh-jira-plus
