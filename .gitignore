@@ -27,6 +27,7 @@ xorg*
 .config/RescueTime.com/
 .config/Slack/
 .config/Swiftness/
+.config/Synergy/
 .config/VirtualBox/
 .config/Yubico/
 .config/balena-etcher-electron/
@@ -55,6 +56,7 @@ xorg*
 .config/solaar/
 .config/spotify/
 .config/todoist/
+.config/vivaldi/
 .config/wireshark/
 
 # SSH Keys
@@ -118,6 +120,7 @@ xorg*
 .sonarlint/
 .steam/
 .swiftness/
+.synergy/
 .var/
 .w3m/
 .wakatime/
