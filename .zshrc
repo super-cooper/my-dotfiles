@@ -63,6 +63,7 @@ antigen bundle urbainvaes/fzf-marks
 antigen bundle wfxr/forgit
 antigen bundle zdharma/zsh-diff-so-fancy
 antigen bundle djui/alias-tips
+antigen bundle hlissner/zsh-autopair
 antigen bundle zdharma/fast-syntax-highlighting  # MUST BE LAST!
 antigen apply
 
@@ -120,11 +121,7 @@ export RIPGREP_CONFIG_PATH=/home/$USER/.ripgrep
 
 # PS1
 if [[ $EUID -ne 0 ]]; then
-    if [[ $JETBRAINS_TERM == 1 ]]; then
-        ZSH_THEME=bira
-    else
-        PS1=$'%{\e[\033[01;32m%}┌────%{\e[\033[00m%}${debian_chroot:+($debian_chroot)}%{\e[\033[01;32m%}%n@%M%{\e[\033[00m%}:%{\e[\033[01;34m%}%(5~|%-1~/.../%3~|%4~)%{\e[$(tput setaf 1)$(__git_ps1 " (%s)")%}\n%{\e[\033[01;32m%}└─\[%{\e[\033[00m%}\$ '
-    fi
+    PS1=$'%{\e[\033[01;32m%}┌────%{\e[\033[00m%}${debian_chroot:+($debian_chroot)}%{\e[\033[01;32m%}%n@%M%{\e[\033[00m%}:%{\e[\033[01;34m%}%(5~|%-1~/.../%3~|%4~)%{\e[$(tput setaf 1)$(__git_ps1 " (%s)")%}\n%{\e[\033[01;32m%}└─\[%{\e[\033[00m%}\$ '
 else
     PS1=$'%{\e[\033[01;32m%}┌────%{\e[\033[32m%}${debian_chroot:+($debian_chroot)}%{\e[\033[01;31m%}%n%{\e[\033[32m%}@%M%{\e[\033[00m%}:%{\e[\033[01;34m%}%(5~|%-1~/.../%3~|%4~)%{\e[$(tput setaf 1)%}$(__git_ps1 " (%s)")\n%{\e[\033[01;32m%}└─\[%{\e[\033[00m%}\$ '
 fi
@@ -153,4 +150,23 @@ source /home/adam/.anaconda3/etc/profile.d/conda.sh
 
 # Bad aliases
 unalias _
+unalias sp
 unsetopt correctall
+
+# double press Esc to add sudo.
+sudo-command-line() {
+    [[ -z $BUFFER ]] && zle up-history
+    if [[ $BUFFER == sudo\ * ]]; then
+        LBUFFER="${LBUFFER#sudo }"
+    elif [[ $BUFFER == $EDITOR\ * ]]; then
+        LBUFFER="${LBUFFER#$EDITOR }"
+        LBUFFER="sudoedit $LBUFFER"
+    elif [[ $BUFFER == sudoedit\ * ]]; then
+        LBUFFER="${LBUFFER#sudoedit }"
+        LBUFFER="$EDITOR $LBUFFER"
+    else
+        LBUFFER="sudo $LBUFFER"
+    fi
+}
+zle -N sudo-command-line
+bindkey "\e\e" sudo-command-line
