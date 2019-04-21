@@ -1,2 +1,6 @@
+" Use system clipboard for copy+paste
 set clipboard+=unnamed
+
+" Search before pressing enter
+set incsearch
 
