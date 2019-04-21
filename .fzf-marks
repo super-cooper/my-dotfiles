@@ -1,7 +1,6 @@
-aoc : /home/adam/dev/Advent of dev/2018
-dl : /home/adam/Downloads
 code : /home/adam/dev
 dev : /home/adam/dev
-scripts : /home/adam/dev/scripts
-gdrive : /home/adam/GoogleDrive
 docs : /home/adam/Documents
+gdrive : /home/adam/GoogleDrive
+dl : /home/adam/Downloads
+scripts : /home/adam/dev/scripts
