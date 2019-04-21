@@ -3,6 +3,7 @@ eval $(hub alias -s)
 alias cat='bat --italic-text=always --decorations=auto'
 alias find=fdfind
 alias wtf='wtf --config=/tmp/wtfconfig.yml'
+alias {ed,emacs,nano,vi}=vim
 
 # macros for editing bash configs
 alias reset='source ~/.zshrc'
@@ -33,11 +34,15 @@ u() {
     cd $(eval printf "../%0.s" {1..$1})
 }
 
-# More cd aliases
+# Typos
 alias cd..='cd ..'       # Common misspelling for going up one directory
+alias :q=exit
 
 # mkdir fix
 alias mkdir='mkdir -p'
+mkcd() {
+    mkdir -p "$1" && cd "$1"
+}
 
 # make xclip do what I want
 alias xclip='xclip -selection clipboard'
@@ -55,6 +60,7 @@ hex() {
     hexyl $@ | less
 }
 alias calc=qalc
+alias open=xdg-open
 
 # Git to fzf replacers 
 alias gitignore=gi
