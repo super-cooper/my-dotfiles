@@ -1,6 +1,0 @@
-[Desktop Entry]
-Name=Start NordVPN
-Comment=Run Start NordVPN
-Exec=nordvpn connect US
-Terminal=false
-Type=Application
