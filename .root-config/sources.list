@@ -22,6 +22,6 @@ deb http://ftp.debian.org/debian/ buster main non-free
 # deb-src http://ftp.us.debian.org/debian/ sid main
 
 # VirtualBox
-deb https://download.virtualbox.org/virtualbox/debian jessie contrib
+deb http://download.virtualbox.org/virtualbox/debian stretch contrib
 
 
