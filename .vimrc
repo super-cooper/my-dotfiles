@@ -6,7 +6,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 
 " Enable syntax highlighting with 'material' theme
 syntax on
-let g:one_allow_italics = 1
+let g:one_allow_italics=1
 set background=dark
 colo one
 if (has("termguicolors"))
@@ -41,10 +41,10 @@ call vundle#end()
 set clipboard=unnamedplus
 
 """""""""""Airline settings"""""""""""""
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts=1
 if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
+  let g:airline_symbols={}
 endif
-let g:airline_symbols.space = "\ua0"
+let g:airline_symbols.space="\ua0"
 let g:airline_theme='one'
 set fillchars+=stl:\ ,stlnc:\
