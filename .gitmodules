@@ -37,3 +37,18 @@
 [submodule ".zsh/zsh-_url-httplink"]
 	path = .zsh/zsh-_url-httplink
 	url = git://github.com/Valodim/zsh-_url-httplink.git
+[submodule ".vim/bundle/vim-airline"]
+	path = .vim/bundle/vim-airline
+	url = git://github.com/vim-airline/vim-airline.git
+[submodule ".vim/bundle/vim-airline-themes"]
+	path = .vim/bundle/vim-airline-themes
+	url = git://github.com/vim-airline/vim-airline-themes.git
+[submodule ".vim/bundle/vim-fugitive"]
+	path = .vim/bundle/vim-fugitive
+	url = git://github.com/tpope/vim-fugitive.git
+[submodule ".vim/bundle/material.vim"]
+	path = .vim/bundle/material.vim
+	url = git://github.com/kaicataldo/material.vim.git
+[submodule ".vim/bundle/vim-one"]
+	path = .vim/bundle/vim-one
+	url = git://github.com/rakr/vim-one.git
