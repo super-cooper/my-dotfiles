@@ -1,13 +1,14 @@
 [user]
-	name = Adam Cooper
+	name  = Adam Cooper
 	email = adamcooperrc@gmail.com
 [credential]
 	helper = cache
 [alias]
 	co = checkout
-	b = branch
+	b  = branch
 	ci = commit
     st = status
+    d  = diff
     amend = commit --amend
     update-submodules = submodule foreach git pull origin master
     fuzz = !/home/adam/dev/scripts/git-fuzz
