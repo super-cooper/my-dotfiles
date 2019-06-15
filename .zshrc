@@ -138,20 +138,21 @@ zmodload -i zsh/complist
 # fpath
 fpath=(/home/adam/.zsh/ /home/adam/dev/scripts/zsh $fpath)
 
-# Environment
-export PATH=$PATH:/usr/racket/bin:/home/adam/dev/scripts:/home/adam/.gopath/bin:/home/adam/dev/scripts/zsh/zemojify:/sbin
+# environment
+export PATH=$PATH:/usr/racket/bin:/home/adam/dev/scripts:/home/adam/.gopath/bin:/home/adam/dev/scripts/zsh/zemojify:/sbin:~/.local/bin/
 export CLASSPATH=/home/adam/Java/lib
 export EDITOR=vim
 export RANGER_LOAD_DEFAULT_RC=false
 export GOPATH=/home/adam/.gopath
 
-# Activate anaconda
+# activate anaconda
 source /home/adam/.anaconda3/etc/profile.d/conda.sh
 
-# Bad aliases
+# bad aliases
 unalias _
 unalias sp
 unsetopt correctall
+export ZSH_PLUGINS_ALIAS_TIPS_EXCLUDES="vi emacs nano ed :q"
 
 # double press Esc to add sudo.
 sudo-command-line() {
