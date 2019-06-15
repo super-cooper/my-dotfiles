@@ -118,6 +118,7 @@ video/flv=vlc.desktop;
 video/x-flc=vlc.desktop;
 video/x-fli=vlc.desktop;
 video/x-flv=vlc.desktop;
+text/html=vim.desktop;
 
 [Default Applications]
 x-scheme-handler/mailspring=mailspring.desktop
