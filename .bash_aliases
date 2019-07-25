@@ -4,6 +4,7 @@ alias cat='bat --italic-text=always --decorations=auto'
 alias find=fdfind
 alias wtf='wtf --config=/tmp/wtfconfig.yml'
 alias {ed,emacs,nano,vi}=vim
+alias grep=rg
 
 # macros for editing bash configs
 alias reset='source ~/.zshrc'
@@ -60,7 +61,7 @@ hex() {
     hexyl $@ | less
 }
 alias calc=qalc
-alias open=xdg-open
+[ -z "$(command -v open)" ] && alias open=xdg-open
 
 # Git to fzf replacers 
 alias gitignore=gi

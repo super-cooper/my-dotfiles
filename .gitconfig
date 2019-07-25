@@ -11,12 +11,13 @@
     d  = diff
     amend = commit --amend
     update-submodules = submodule foreach git pull origin master
-    fuzz = !/home/adam/dev/scripts/git-fuzz
-	restore = !/home/adam/dev/scripts/git-fuzz r
-    sed = !/home/adam/dev/scripts/git-sed
+    fuzz = !$HOME/dev/scripts/git-fuzz
+	restore = !$HOME/dev/scripts/git-fuzz r
+    sed = !$HOME/dev/scripts/git-sed
+    current-branch = !$HOME/dev/scripts/git-current-branch.bash
 [core]
 	pager = diff-so-fancy | less --tabs=4 -RFX
-	excludesfile = /home/adam/.gitignore-global
+	excludesfile = $HOME/.gitignore-global
 [color]
 	ui = true
 [color "diff-highlight"]

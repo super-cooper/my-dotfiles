@@ -1,4 +1,4 @@
-export ZSH="/home/adam/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # History tweaks 
 HISTSIZE=10000000
@@ -68,10 +68,8 @@ antigen bundle zdharma/fast-syntax-highlighting  # MUST BE LAST!
 antigen apply
 
 # fzf goodies
-[ -f /home/adam/.fzf.zsh ] && source /home/adam/.fzf.zsh
-if [ -d /home/adam/.fzf-scripts ]; then
-    PATH=$PATH:/home/adam/.fzf-scripts
-fi
+[ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
+[ -d $HOME/.fzf-scripts ] && PATH=$PATH:$HOME/.fzf-scripts
 export FZF_DEFAULT_OPTS='--ansi'
 export FZF_DEFAULT_COMMAND='fdfind --color always --follow'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
@@ -117,7 +115,7 @@ export BAT_THEME="TwoDark"
 export BAT_STYLE=full
 
 # ripgrep config
-export RIPGREP_CONFIG_PATH=/home/$USER/.ripgrep
+export RIPGREP_CONFIG_PATH=/$HOME/.ripgrep
 
 # PS1
 if [[ $EUID -ne 0 ]]; then
@@ -127,26 +125,25 @@ else
 fi
 
 # import aliases
-if [ -f /home/adam/.bash_aliases ]; then
-    source /home/adam/.bash_aliases
-fi
+[ -f $HOME/.bash_aliases ] && source $HOME/.bash_aliases
+[ -f $HOME/.mongo_aliases ] && source $HOME/.mongo_aliases
 
 # other imports
 autoload -U compinit && compinit
 zmodload -i zsh/complist
 
 # fpath
-fpath=(/home/adam/.zsh/ /home/adam/dev/scripts/zsh $fpath)
+fpath=($HOME/.zsh/ $HOME/dev/scripts/zsh $fpath)
 
 # environment
-export PATH=$PATH:/usr/racket/bin:/home/adam/dev/scripts:/home/adam/.gopath/bin:/home/adam/dev/scripts/zsh/zemojify:/sbin:~/.local/bin/
-export CLASSPATH=/home/adam/Java/lib
+export PATH=$PATH:/usr/racket/bin:$HOME/dev/scripts:$HOME/.gopath/bin:$HOME/dev/scripts/zsh/zemojify:/sbin:$HOME/.local/bin/
+export CLASSPATH=$HOME/Java/lib
 export EDITOR=vim
 export RANGER_LOAD_DEFAULT_RC=false
-export GOPATH=/home/adam/.gopath
+export GOPATH=$HOME/.gopath
 
 # activate anaconda
-source /home/adam/.anaconda3/etc/profile.d/conda.sh
+source $HOME/.anaconda3/etc/profile.d/conda.sh
 
 # bad aliases
 unalias _

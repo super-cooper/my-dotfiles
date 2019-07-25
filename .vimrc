@@ -38,7 +38,11 @@ Plugin 'wakatime/vim-wakatime'
 call vundle#end()
 
 " Use system clipboard for copy/paste
-set clipboard=unnamedplus
+if has('macunix')
+    set clipboard=unnamed
+else
+    set clipboard=unnamedplus
+endif
 
 """""""""""Airline settings"""""""""""""
 let g:airline_powerline_fonts=1

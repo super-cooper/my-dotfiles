@@ -1,0 +1,7 @@
+# workflow tool profile
+source /Users/adam/.config/server-workflow-tool/profile
+
+# aliases
+alias fdfind=fd
+alias resmoke='$HOME/mongodb/mongo/venv/bin/python $HOME/mongodb/mongo/buildscripts/resmoke.py -j4'
+
