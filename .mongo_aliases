@@ -1,5 +1,6 @@
-# workflow tool profile
-source /Users/adam/.config/server-workflow-tool/profile
+# environment setup
+source $HOME/.config/server-workflow-tool/profile
+source $HOME/mongodb/mongo/python3-venv/bin/activate
 
 # aliases
 alias fdfind=fd

@@ -2,3 +2,6 @@
 cmake-build-debug/
 *__pycache__/
 *.o
+clang+llvm-*
+venv/
+*.bash

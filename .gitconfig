@@ -17,7 +17,7 @@
     current-branch = !$HOME/dev/scripts/git-current-branch.bash
 [core]
 	pager = diff-so-fancy | less --tabs=4 -RFX
-	excludesfile = $HOME/.gitignore-global
+	excludesfile = ~/.gitignore-global
 [color]
 	ui = true
 [color "diff-highlight"]

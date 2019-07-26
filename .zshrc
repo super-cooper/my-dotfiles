@@ -25,6 +25,7 @@ setopt HIST_REDUCE_BLANKS
 # Other shell options
 setopt completealiases
 export COMPLETION_WAITING_DOTS=false
+export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
@@ -117,9 +118,19 @@ export BAT_STYLE=full
 # ripgrep config
 export RIPGREP_CONFIG_PATH=/$HOME/.ripgrep
 
+# function to get python venv info
+function venv_info(){
+    if [[ -n "$VIRTUAL_ENV" ]]; then
+        venv="${VIRTUAL_ENV##*/}"
+    else
+        venv=''
+    fi
+    [[ -n "$venv" ]] && echo "%{\e[\033[01;94m%}($venv) "
+}
+
 # PS1
 if [[ $EUID -ne 0 ]]; then
-    PS1=$'%{\e[\033[01;32m%}┌────%{\e[\033[00m%}${debian_chroot:+($debian_chroot)}%{\e[\033[01;32m%}%n@%M%{\e[\033[00m%}:%{\e[\033[01;34m%}%(5~|%-1~/.../%3~|%4~)%{\e[$(tput setaf 1)$(__git_ps1 " (%s)")%}\n%{\e[\033[01;32m%}└─\[%{\e[\033[00m%}\$ '
+    PS1=$'%{\e[\033[01;32m%}┌────%{\e[\033[00m%}${debian_chroot:+($debian_chroot)}%{\e[\033[01;32m%}%n@%M%{\e[\033[00m%}:%{\e[\033[01;34m%}%(5~|%-1~/.../%3~|%4~)%{\e[$(tput setaf 1)$(__git_ps1 " (%s)")%} $(venv_info)\n%{\e[\033[01;32m%}└─\[%{\e[\033[00m%}\$ '
 else
     PS1=$'%{\e[\033[01;32m%}┌────%{\e[\033[32m%}${debian_chroot:+($debian_chroot)}%{\e[\033[01;31m%}%n%{\e[\033[32m%}@%M%{\e[\033[00m%}:%{\e[\033[01;34m%}%(5~|%-1~/.../%3~|%4~)%{\e[$(tput setaf 1)%}$(__git_ps1 " (%s)")\n%{\e[\033[01;32m%}└─\[%{\e[\033[00m%}\# '
 fi
