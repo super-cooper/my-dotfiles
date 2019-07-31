@@ -50,6 +50,7 @@ plugins=(
   vagrant
   vscode
   web-search
+  vi-mode
 )
 
 # Plugin loaders
@@ -135,10 +136,6 @@ else
     PS1=$'%{\e[\033[01;32m%}┌────%{\e[\033[32m%}${debian_chroot:+($debian_chroot)}%{\e[\033[01;31m%}%n%{\e[\033[32m%}@%M%{\e[\033[00m%}:%{\e[\033[01;34m%}%(5~|%-1~/.../%3~|%4~)%{\e[$(tput setaf 1)%}$(__git_ps1 " (%s)")\n%{\e[\033[01;32m%}└─\[%{\e[\033[00m%}\# '
 fi
 
-# import aliases
-[ -f $HOME/.bash_aliases ] && source $HOME/.bash_aliases
-[ -f $HOME/.mongo_aliases ] && source $HOME/.mongo_aliases
-
 # other imports
 autoload -U compinit && compinit
 zmodload -i zsh/complist
@@ -177,5 +174,11 @@ sudo-command-line() {
         LBUFFER="sudo $LBUFFER"
     fi
 }
+
+# command line keybinds
 zle -N sudo-command-line
-bindkey "\e\e" sudo-command-line
+bindkey "^s" sudo-command-line  # press CTRL+S to prepend "sudo" to current command
+
+# import aliases
+[ -f $HOME/.bash_aliases ] && source $HOME/.bash_aliases
+[ -f $HOME/.mongo_aliases ] && source $HOME/.mongo_aliases
