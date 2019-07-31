@@ -93,11 +93,6 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 # Syntax theme for bat
 export BAT_THEME="TwoDark"
 
-# import bash aliases
-if [ -f $HOME/.bash_aliases ]; then
-    . $HOME/.bash_aliases
-fi
-
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -128,5 +123,23 @@ fi
 [ -f $HOME/.forgit.sh ] && source $HOME/.forgit.sh
 
 # Activate anaconda
-. $HOME/.anaconda3/etc/profile.d/conda.sh
+# . $HOME/.anaconda3/etc/profile.d/conda.sh  # commented out by conda initialize
 eval "$(register-python-argcomplete conda)"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/adam/.anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/adam/.anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/adam/.anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/adam/.anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+# import bash aliases
+[ -f $HOME/.bash_aliases ] && source $HOME/.bash_aliases
