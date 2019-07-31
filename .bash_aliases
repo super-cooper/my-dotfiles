@@ -2,6 +2,7 @@
 eval $(hub alias -s)
 alias cat='bat --italic-text=always --decorations=auto'
 alias find=fdfind
+alias fd=fdfind
 alias wtf='wtf --config=/tmp/wtfconfig.yml'
 alias {ed,emacs,nano,vi}=vim
 alias grep=rg
