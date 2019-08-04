@@ -144,7 +144,7 @@ zmodload -i zsh/complist
 fpath=($HOME/.zsh/ $HOME/dev/scripts/zsh $fpath)
 
 # environment
-export PATH=$PATH:/usr/racket/bin:$HOME/dev/scripts:$HOME/.gopath/bin:$HOME/dev/scripts/zsh/zemojify:/sbin:$HOME/.local/bin/
+export PATH=$PATH:/usr/racket/bin:$HOME/dev/scripts:$HOME/.gopath/bin:$HOME/dev/scripts/zsh/zemojify:/sbin:$HOME/.local/bin/:$HOME/adam/.gem/ruby/2.5.0/bin
 export CLASSPATH=$HOME/Java/lib
 export EDITOR=vim
 export RANGER_LOAD_DEFAULT_RC=false
@@ -152,6 +152,9 @@ export GOPATH=$HOME/.gopath
 
 # activate anaconda
 source $HOME/.anaconda3/etc/profile.d/conda.sh
+
+# tab completions
+source $(dirname $(gem which colorls))/tab_complete.sh  # colorls
 
 # bad aliases
 unalias _

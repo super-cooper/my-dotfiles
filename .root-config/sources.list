@@ -1,25 +1,19 @@
-# deb cdrom:[Debian GNU/Linux 9.4.0 _Stretch_ - Official amd64 NETINST 20180310-11:21]/ buster main
+deb http://ftp.us.debian.org/debian testing main
+deb-src http://ftp.us.debian.org/debian testing main
 
-# deb cdrom:[Debian GNU/Linux 9.4.0 _Stretch_ - Official amd64 NETINST 20180310-11:21]/ buster main
-
-deb http://ftp.us.debian.org/debian/ buster main
-deb-src http://ftp.us.debian.org/debian/ buster main
-deb http://ftp.us.debian.org/debian stretch main
-deb-src http://ftp.us.debian.org/debian stretch main
-
-deb http://security.debian.org/debian-security buster/updates main contrib non-free
-deb-src http://security.debian.org/debian-security buster/updates main main contrib non-free
+deb http://security.debian.org/ testing-security main contrib non-free
+deb-src http://security.debian.org/ testing-security main main contrib non-free
 
 # Docker
 deb [arch=amd64] https://download.docker.com/linux/debian buster stable
 
-# Debian 10 "Buster" non-free packages
-deb http://deb.debian.org/debian/ buster main contrib non-free
-deb http://ftp.debian.org/debian/ buster main non-free
+# Debian non-free packages
+deb http://deb.debian.org/debian/ testing main contrib non-free
+deb http://ftp.debian.org/debian/ testing main non-free
 
 # Debian unstable packages
-# deb http://ftp.us.debian.org/debian/ sid main
-# deb-src http://ftp.us.debian.org/debian/ sid main
+# deb http://ftp.us.debian.org/debian/ unstable main
+# deb-src http://ftp.us.debian.org/debian/ unstable main
 
 # VirtualBox
 deb http://download.virtualbox.org/virtualbox/debian stretch contrib
