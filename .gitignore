@@ -55,6 +55,8 @@ xorg*
 .config/qterminal.org/
 .config/solaar/
 .config/spotify/
+.config/Symless/
+.config/teamviewer/
 .config/todoist/
 .config/vivaldi/
 .config/wireshark/
@@ -109,6 +111,7 @@ xorg*
 .nv/
 .parallel/
 .pki/
+.pipupgrade/
 .PlayOnLinux/
 .purple/
 .PyCharm*
