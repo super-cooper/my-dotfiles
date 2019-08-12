@@ -30,7 +30,7 @@ fi
 # some more ls aliases
 alias ll='ls -l'
 alias la='ls -A'
-alias lc='colorls'
+alias lc='colorls --git-status'
 
 # Need not to press cd ../../ ad infinitum
 u() {
