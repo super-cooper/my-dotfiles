@@ -53,7 +53,7 @@ alias xclip='xclip -selection clipboard'
 # dotfiles version control/backup
 alias dotfiles='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 alias dtf='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
-alias env-update='dtf fetch && dtf pull --rebase && dtf update-submodules && pipupgrade --latest --yes && go get -v -u all'
+alias env-update='dtf fetch && dtf pull --rebase && dtf update-submodules && go get -v -u all'
 
 # misc
 alias please='sudo $(fc -ln -1)'
