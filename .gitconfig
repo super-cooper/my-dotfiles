@@ -15,6 +15,7 @@
 	restore = !$HOME/dev/scripts/git-fuzz r
     sed = !$HOME/dev/scripts/git-sed
     current-branch = !$HOME/dev/scripts/git-current-branch.bash
+	aliases = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
 [core]
 	pager = diff-so-fancy | less --tabs=4 -RFX
 	excludesfile = ~/.gitignore-global
