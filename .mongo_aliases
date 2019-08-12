@@ -4,7 +4,7 @@
 
 # aliases
 alias fdfind=fd
-alias resmoke='source /home/adam/mongodb/mongo/python3-venv/bin/activate && $HOME/mongodb/mongo/python3-venv/bin/python $HOME/mongodb/mongo/buildscripts/resmoke.py -j8'
+alias resmoke='source /home/adam/mongodb/mongo/python3-venv/bin/activate && $HOME/mongodb/mongo/python3-venv/bin/python $HOME/mongodb/mongo/buildscripts/resmoke.py -j14'
 alias devenv='source /home/adam/mongodb/mongo/python3-venv/bin/activate'
 
 NINJA_STATUS='[%f/%t (%p) %es] '
