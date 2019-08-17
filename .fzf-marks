@@ -1,8 +1,8 @@
 code : /home/adam/dev
 docs : /home/adam/Documents
-gdrive : /home/adam/GoogleDrive
-scripts : /home/adam/dev/scripts
-www : /home/adam/dev/www
-memebot : /home/adam/dev/memebot
 dev : /home/adam/dev
+gdrive : /home/adam/GoogleDrive
 dl : /home/adam/Downloads
+scripts : /home/adam/dev/scripts
+mongo : /home/adam/mongodb/mongo
+enterprise : /home/adam/mongodb/mongo/src/mongo/db/modules/enterprise

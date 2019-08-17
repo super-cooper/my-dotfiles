@@ -4,5 +4,4 @@ cmake-build-debug/
 *.o
 clang+llvm-*
 venv/
-*.bash
 .gdb_history
