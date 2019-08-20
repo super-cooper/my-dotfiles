@@ -9,6 +9,7 @@
 	ci = commit
     st = status
     d  = diff
+    l  = log
     amend = commit --amend
     update-submodules = submodule foreach git pull origin master
     fuzz = !$HOME/dev/scripts/git-fuzz
@@ -35,3 +36,5 @@
 	whitespace = red reverse
 [diff-so-fancy]
 	markEmptyLines = false
+[commit]
+	gpgsign = true
