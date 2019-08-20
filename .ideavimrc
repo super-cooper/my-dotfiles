@@ -4,3 +4,4 @@ set clipboard+=unnamed
 " Search before pressing enter
 set incsearch
 
+set ideajoin
