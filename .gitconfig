@@ -10,11 +10,10 @@
     st = status
     d  = diff
     l  = log
-    amend = commit --amend
+    amend = commit --amend --date=now
     update-submodules = submodule foreach git pull origin master
     fuzz = !$HOME/dev/scripts/git-fuzz
 	restore = !$HOME/dev/scripts/git-fuzz r
-    sed = !$HOME/dev/scripts/git-sed
     current-branch = !$HOME/dev/scripts/git-current-branch.bash
 	aliases = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
 [core]
