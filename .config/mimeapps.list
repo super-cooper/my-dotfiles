@@ -127,3 +127,4 @@ image/x-sony-srf=shotwell-viewer.desktop;
 image/x-sr2=shotwell-viewer.desktop;
 image/x-srf=shotwell-viewer.desktop;
 image/x-x3f=shotwell-viewer.desktop;
+text/x-log=vim.desktop;
