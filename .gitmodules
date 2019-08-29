@@ -52,3 +52,6 @@
 [submodule ".vim/bundle/vim-one"]
 	path = .vim/bundle/vim-one
 	url = git://github.com/rakr/vim-one.git
+[submodule ".wakatime/wakatime-master"]
+	path = .wakatime/wakatime-master
+	url = git://github.com/wakatime/wakatime.git
