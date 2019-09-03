@@ -75,13 +75,13 @@ antigen apply
 export FZF_DEFAULT_OPTS='--ansi'
 export FZF_DEFAULT_COMMAND='fdfind --color always --follow'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_CTRL_T_OPTS='--preview "[[ -d {} ]] && ls --color=always -lh {} || bat --color always --italic-text always --decorations never --pager never --line-range :1000 {}"'
+export FZF_CTRL_T_OPTS='--preview "[[ -d {} ]] && colorls --color=always -lh {} || bat --color always --italic-text always --decorations never --pager never --line-range :1000 {}"'
 export FZF_ALT_C_COMMAND='fdfind --color always --type d --follow'
-export FZF_ALT_C_OPTS='--preview "ls --color=always -lh {}"'
+export FZF_ALT_C_OPTS='--preview "colorls --color=always -lh {}"'
 export FZF_MARKS_COMMAND=$'fzf --height 40% --reverse --preview "echo {} | cut -d \\  -f3- | tr -d \'\\n\' | xargs -0 ls -lh --color=always"'
 export FZF_COMPLETION_OPTS=$'--preview "\
     if [[ -d {} ]]; then \
-        ls --color=always -lh {} \
+        colorls --color=always -lh {} \
     elif [[ -f {} ]]; then \
         bat --color always --italic-text always --decorations never --pager never --line-range :1000 {} \
     elif [[ -v {} ]]; then \
@@ -120,7 +120,7 @@ export BAT_STYLE=full
 export RIPGREP_CONFIG_PATH=/$HOME/.ripgrep
 
 # function to get python venv info
-function venv_info(){
+function venv_info() {
     if [[ -n "$VIRTUAL_ENV" ]]; then
         venv="${VIRTUAL_ENV##*/}"
     else
@@ -128,6 +128,10 @@ function venv_info(){
     fi
     [[ -n "$venv" ]] && echo "%{\e[\033[01;94m%}($venv) "
 }
+
+# virtualenv wrapper setup
+export VIRTUALENVWRAPPER_PYTHON=$(which python3)
+[ -f /usr/local/bin/virtualenvwrapper.sh ] && source /usr/local/bin/virtualenvwrapper.sh
 
 # PS1
 if [[ $EUID -ne 0 ]]; then
