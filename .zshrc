@@ -39,7 +39,6 @@ fi
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 plugins=(
   catimg
-  colored-man-pages
   docker
   encode64
   jira
@@ -78,7 +77,7 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_CTRL_T_OPTS='--preview "[[ -d {} ]] && colorls --color=always -lh {} || bat --color always --italic-text always --decorations never --pager never --line-range :1000 {}"'
 export FZF_ALT_C_COMMAND='fdfind --color always --type d --follow'
 export FZF_ALT_C_OPTS='--preview "colorls --color=always -lh {}"'
-export FZF_MARKS_COMMAND=$'fzf --height 40% --reverse --preview "echo {} | cut -d \\  -f3- | tr -d \'\\n\' | xargs -0 ls -lh --color=always"'
+export FZF_MARKS_COMMAND=$'fzf --height 40% --reverse --preview "echo {} | cut -d \\  -f3- | tr -d \'\\n\' | xargs -0 colorls -lh --color=always"'
 export FZF_COMPLETION_OPTS=$'--preview "\
     if [[ -d {} ]]; then \
         colorls --color=always -lh {} \
@@ -91,9 +90,9 @@ export FZF_COMPLETION_OPTS=$'--preview "\
         pstree -sUH $(echo {} | awk \'{ print $2 }\') $(echo {} | awk \'{ print $2 }\') \
     elif [[ -n $(grep \'Host {}\' $HOME/.ssh/config) ]]; then \
         start=$(grep -n \'Host {}\' $HOME/.ssh/config | cut -f1 -d:) \
-        bat --color always --italic-text always --decorations never --pager never --line-range $start:$(( $start + 2 )) $HOME/.ssh/config \
+        bat --color always --italic-text always -l ssh_config --decorations never --pager never --line-range $start:$(( $start + 2 )) $HOME/.ssh/config \
     else \
-        grep "{}" /etc/hosts \
+        bat --color always --italic-text always --decorations never --pager never /etc/hosts | grep --color=always "{}" \
     fi"'
 
 _fzf_compgen_path() {
@@ -126,7 +125,7 @@ function venv_info() {
     else
         venv=''
     fi
-    [[ -n "$venv" ]] && echo "%{\e[\033[01;94m%}($venv) "
+    [[ -n "$venv" ]] && echo "%{\e[\033[01;93m%}($venv) "
 }
 
 # virtualenv wrapper setup
@@ -153,6 +152,7 @@ export CLASSPATH=$HOME/Java/lib
 export EDITOR=vim
 export RANGER_LOAD_DEFAULT_RC=false
 export GOPATH=$HOME/.gopath
+export MANPAGER=export MANPAGER="sh -c 'col -b | bat --tabs=0 -l man -p'"
 
 # activate anaconda
 source $HOME/.anaconda3/etc/profile.d/conda.sh
@@ -166,7 +166,7 @@ unalias sp
 unsetopt correctall
 export ZSH_PLUGINS_ALIAS_TIPS_EXCLUDES="vi emacs nano ed :q"
 
-# double press Esc to add sudo.
+# command line keybinds
 sudo-command-line() {
     [[ -z $BUFFER ]] && zle up-history
     if [[ $BUFFER == sudo\ * ]]; then
@@ -182,9 +182,9 @@ sudo-command-line() {
     fi
 }
 
-# command line keybinds
+# press CTRL+S to prepend "sudo" to current command
 zle -N sudo-command-line
-bindkey "^s" sudo-command-line  # press CTRL+S to prepend "sudo" to current command
+bindkey "^s" sudo-command-line  
 
 # import aliases
 [ -f $HOME/.bash_aliases ] && source $HOME/.bash_aliases
