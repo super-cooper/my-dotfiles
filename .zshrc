@@ -74,13 +74,13 @@ antigen apply
 export FZF_DEFAULT_OPTS='--ansi'
 export FZF_DEFAULT_COMMAND='fdfind --color always --follow'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_CTRL_T_OPTS='--preview "[[ -d {} ]] && colorls --color=always -lh {} || bat --color always --italic-text always --decorations never --pager never --line-range :1000 {}"'
+export FZF_CTRL_T_OPTS='--preview "[[ -d {} ]] && colorls --color=always -lh --git-status {} || bat --color always --italic-text always --decorations never --pager never --line-range :1000 {}"'
 export FZF_ALT_C_COMMAND='fdfind --color always --type d --follow'
-export FZF_ALT_C_OPTS='--preview "colorls --color=always -lh {}"'
-export FZF_MARKS_COMMAND=$'fzf --height 40% --reverse --preview "echo {} | cut -d \\  -f3- | tr -d \'\\n\' | xargs -0 colorls -lh --color=always"'
+export FZF_ALT_C_OPTS='--preview "colorls --color=always -lh --git-status {}"'
+export FZF_MARKS_COMMAND=$'fzf --height 40% --reverse --preview "echo {} | cut -d \\  -f3- | tr -d \'\\n\' | xargs -0 colorls -lh --color=always --git-status"'
 export FZF_COMPLETION_OPTS=$'--preview "\
     if [[ -d {} ]]; then \
-        colorls --color=always -lh {} \
+        colorls --color=always -lh --git-status {} \
     elif [[ -f {} ]]; then \
         bat --color always --italic-text always --decorations never --pager never --line-range :1000 {} \
     elif [[ -v {} ]]; then \
