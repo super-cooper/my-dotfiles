@@ -55,3 +55,6 @@
 [submodule ".wakatime/wakatime-master"]
 	path = .wakatime/wakatime-master
 	url = git://github.com/wakatime/wakatime.git
+[submodule ".vim/bundle/vim-gitgutter"]
+	path = .vim/bundle/vim-gitgutter
+	url = git://github.com/airblade/vim-gitgutter.git
