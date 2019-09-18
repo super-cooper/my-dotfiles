@@ -9,7 +9,7 @@
 	ci = commit
     st = status
     d  = diff
-    l  = log
+    l  = log --pretty --show-signature
     amend = commit --amend --date=now
     update-submodules = submodule foreach git pull origin master
     fuzz = !$HOME/dev/scripts/git-fuzz
