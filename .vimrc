@@ -22,6 +22,9 @@ set number
 " Autoload file changes
 set autoread
 
+" Update every half second
+set updatetime=50
+
 " Search before pressing enter
 set incsearch
 
