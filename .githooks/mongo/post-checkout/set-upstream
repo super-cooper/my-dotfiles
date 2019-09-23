@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ -z "$(git status -sb | head -n1 | grep '\.\.\.')" ]; then
+    for head in $(ls .git/refs/remotes/origin/); do
+        if [ "$(git show-ref $(git current-branch) -s)" == "$(cat .git/refs/remotes/origin/$head)" ]; then
+            git branch --set-upstream-to origin/$head
+            exit 0
+        fi
+    done
+    echo "No valid upstream found :("
+fi
