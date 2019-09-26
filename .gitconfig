@@ -37,3 +37,5 @@
 	markEmptyLines = false
 [commit]
 	gpgsign = true
+[branch]
+	autoSetupMerge = always
