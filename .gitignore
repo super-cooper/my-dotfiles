@@ -43,6 +43,7 @@ xorg*
 .config/gedit/
 .config/github/
 .config/gnome-boxes/
+.config/gnome-contacts/
 .config/gnome-control-center/
 .config/google/
 .config/google-chrome/
