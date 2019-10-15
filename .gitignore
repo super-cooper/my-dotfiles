@@ -45,6 +45,7 @@ xorg*
 .config/gnome-boxes/
 .config/gnome-contacts/
 .config/gnome-control-center/
+.config/goa*
 .config/google/
 .config/google-chrome/
 .config/gpick/
