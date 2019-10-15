@@ -99,6 +99,7 @@ xorg*
 .gnome/apps/
 .gnome2/accels/
 .gnome2/mail-notification/
+.gnomint/
 .gnupg/
 .gopath/
 .gradle/
@@ -137,6 +138,7 @@ xorg*
 .vnc/
 .w3m/
 .WebStorm*
+.xca/
 .yubioath/
 
 # files
