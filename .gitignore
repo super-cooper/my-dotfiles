@@ -49,11 +49,14 @@ xorg*
 .config/google/
 .config/google-chrome/
 .config/gpick/
+.config/gtk-3.0/bookmarks
+.config/gtk-3.0/servers
 .config/ibus/
 .config/inkscape/
 .config/kde.org/
 .config/libreoffice/
 .config/libvirt/
+.config/mimeapps.list
 .config/nordvpn/
 .config/obs-studio/
 .config/opera/
@@ -64,6 +67,7 @@ xorg*
 .config/Symless/
 .config/teamviewer/
 .config/todoist/
+.config/totem/
 .config/vivaldi/
 .config/wireshark/
 
@@ -166,6 +170,7 @@ xorg*
 .evergreen.yml
 .gdb_history
 .gksu*
+.gtk-bookmarks
 .gtkrc.bak
 .ICEauthority
 .ldaprc
