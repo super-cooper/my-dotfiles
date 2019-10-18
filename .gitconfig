@@ -39,3 +39,8 @@
 	gpgsign = true
 [branch]
 	autoSetupMerge = always
+[merge]
+	tool = vimdiff
+	conflictstyle = diff3
+[mergetool]
+	prompt = false
