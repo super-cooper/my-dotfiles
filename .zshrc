@@ -156,6 +156,7 @@ export MANPAGER=export MANPAGER="sh -c 'col -b | bat --tabs=0 -l man -p'"
 
 # activate anaconda
 source $HOME/.anaconda3/etc/profile.d/conda.sh
+conda deactivate
 
 # tab completions
 source $(dirname $(gem which colorls))/tab_complete.sh  # colorls
