@@ -8,5 +8,6 @@
     "height": 720
   },
   "MINIMIZE_TO_TRAY": false,
-  "OPEN_ON_STARTUP": false
+  "OPEN_ON_STARTUP": true,
+  "BACKGROUND_COLOR": "#202225"
 }
