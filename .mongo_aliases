@@ -3,9 +3,10 @@ export KRB5_KDC_PROFILE=$HOME/mongodb/config/kerberos/krb5-kdc/kdc.conf
 export KRB5_CONFIG=$HOME/mongodb/config/kerberos/krb5-kdc/krb5.conf
 export KRB5_KTNAME=$HOME/mongodb/config/kerberos/krb5-kdc/mongodb.keytab
 export KRB5_TRACE=/dev/stdout
+export KRB5_CLIENT_KTNAME=$HOME/mongodb/config/kerberos/krb5-kdc/mongodb.keytab
 
 # aliases
 alias fdfind=fd
-alias resmoke='source /home/adam/.virtualenvs/mongo/bin/activate && python3 $HOME/mongodb/mongo/buildscripts/resmoke.py -j14'
+alias resmoke='/home/adam/.virtualenvs/mongo/bin/python3 $HOME/mongodb/mongo/buildscripts/resmoke.py -j14'
 
 NINJA_STATUS='[%f/%t (%p) %es] '
