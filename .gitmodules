@@ -58,3 +58,6 @@
 [submodule ".vim/bundle/vim-gitgutter"]
 	path = .vim/bundle/vim-gitgutter
 	url = git://github.com/airblade/vim-gitgutter.git
+[submodule ".extensions/Rietveld-Usability-Toolkit"]
+	path = .extensions/Rietveld-Usability-Toolkit
+	url = git://github.com/mongodb-labs/Rietveld-Usability-Toolkit.git
