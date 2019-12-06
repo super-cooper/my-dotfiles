@@ -38,6 +38,10 @@ Plugin 'VundleVim/Vundle.vim'
 " WakaTime plugin
 Plugin 'wakatime/vim-wakatime'
 
+" clangd plugins
+Plugin 'ycm-core/YouCompleteMe'
+Plugin 'rdnetto/YCM-Generator'
+
 call vundle#end()
 
 " Use system clipboard for copy/paste
@@ -55,3 +59,20 @@ endif
 let g:airline_symbols.space="\ua0"
 let g:airline_theme='one'
 set fillchars+=stl:\ ,stlnc:\
+
+"""""""""""""clangd setup"""""""""""""""
+if executable('clangd')
+  augroup lsp_clangd
+    autocmd!
+    autocmd User lsp_setup call lsp#register_server({
+                \ 'name': 'clangd',
+                \ 'cmd': {server_info->['clangd']},
+                \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp'],
+                \ })
+    autocmd FileType c setlocal omnifunc=lsp#complete
+    autocmd FileType cpp setlocal omnifunc=lsp#complete
+    autocmd FileType objc setlocal omnifunc=lsp#complete
+    autocmd FileType objcpp setlocal omnifunc=lsp#complete
+  augroup end
+endif
+

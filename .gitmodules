@@ -61,3 +61,12 @@
 [submodule ".extensions/Rietveld-Usability-Toolkit"]
 	path = .extensions/Rietveld-Usability-Toolkit
 	url = git://github.com/mongodb-labs/Rietveld-Usability-Toolkit.git
+[submodule ".vim/bundle/YouCompleteMe"]
+	path = .vim/bundle/YouCompleteMe
+	url = git://github.com/ycm-core/YouCompleteMe.git
+[submodule ".vim/bundle/YCM-Generator"]
+    path = .vim/bundle/YCM-Generator
+    url = git://github.com/rdnetto/YCM-Generator.git
+[submodule ".vim/bundle/color_coded"]
+    path = .vim/bundle/color_coded
+    url = git://github.com/jeaye/color_coded.git
