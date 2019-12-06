@@ -88,6 +88,7 @@ xorg*
 .cache/
 .cargo/
 .ccache/
+.clangd/
 .CLion*
 .cmake/
 .conda/
@@ -96,6 +97,7 @@ xorg*
 .docker/
 .dotfiles/
 .fonts/
+.forgit/
 .gconf/
 .gem/
 .ghc/
