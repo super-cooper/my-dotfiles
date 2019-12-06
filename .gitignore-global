@@ -5,3 +5,5 @@ cmake-build-debug/
 clang+llvm-*
 venv/
 .gdb_history
+.clangd/
+build/
