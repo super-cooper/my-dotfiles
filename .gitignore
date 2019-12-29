@@ -172,6 +172,7 @@ xorg*
 .dmrc
 .evergreen.yml
 .gdb_history
+.github_token
 .gksu*
 .gtk-bookmarks
 .gtkrc.bak
