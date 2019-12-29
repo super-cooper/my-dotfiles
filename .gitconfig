@@ -1,6 +1,7 @@
 [user]
 	name  = Adam Cooper
 	email = adam@adamcooper.sh
+	signingKey = 22F76ED85C31FEE5
 [credential]
 	helper = cache
 [alias]
