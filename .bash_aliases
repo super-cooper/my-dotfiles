@@ -70,3 +70,8 @@ alias calc=qalc
 
 # Git to fzf replacers 
 alias gitignore=gi
+
+# apt helpers
+apt-unpin-all() {
+    sudo apt-mark showhold | sudo awk '{ print $1, "install" }' | sudo dpkg --set-selections
+}
