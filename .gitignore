@@ -1,6 +1,7 @@
 # No non-dotfiles
 !.*
 Android/
+Containers/
 dev/
 Desktop/
 Documents/
