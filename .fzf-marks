@@ -1,9 +1,10 @@
 code : /home/adam/dev
 docs : /home/adam/Documents
-dev : /home/adam/dev
 gdrive : /home/adam/GoogleDrive
-dl : /home/adam/Downloads
 enterprise : /home/adam/mongodb/mongo/src/mongo/db/modules/enterprise
 scripts : /home/adam/dev/scripts
 mongo : /home/adam/mongodb/mongo
 home : /home/adam
+dev : /home/adam/dev
+containers : /home/adam/Containers
+dl : /home/adam/Downloads
