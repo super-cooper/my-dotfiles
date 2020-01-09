@@ -25,6 +25,7 @@ xorg*
 .config/GIMP/
 .config/Hardcode-Tray/
 .config/Insync/
+.config/Joplin/
 .config/Mailspring/
 .config/QtProject*
 .config/RescueTime.com/
@@ -55,6 +56,7 @@ xorg*
 .config/gtk-3.0/servers
 .config/ibus/
 .config/inkscape/
+.config/joplin-desktop/
 .config/kde.org/
 .config/libreoffice/
 .config/libvirt/
@@ -117,6 +119,8 @@ xorg*
 .ipython/
 .java/
 .jira*
+.joplin/
+.joplin-bin/
 .local/bin/
 .local/lib/
 .local/share/
