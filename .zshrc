@@ -62,7 +62,6 @@ antigen bundle gerges/oh-my-zsh-jira-plus
 antigen bundle RobSis/zsh-completion-generator
 antigen bundle urbainvaes/fzf-marks
 antigen bundle wfxr/forgit
-antigen bundle zdharma/zsh-diff-so-fancy
 antigen bundle djui/alias-tips
 antigen bundle hlissner/zsh-autopair
 antigen bundle zdharma/fast-syntax-highlighting  # MUST BE LAST!
