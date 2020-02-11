@@ -12,7 +12,7 @@
     d  = diff
     l  = log --pretty --show-signature
     amend = commit --amend --date=now
-    update-submodules = submodule foreach git pull origin master
+    update-submodules = submodule foreach git pull 
     fuzz = !$HOME/dev/scripts/git-fuzz
 	restore = !$HOME/dev/scripts/git-fuzz r
     current-branch = !$HOME/dev/scripts/git-current-branch.bash
