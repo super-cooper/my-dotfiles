@@ -12,6 +12,7 @@
     d  = diff
     l  = log --pretty --show-signature
     amend = commit --amend --date=now
+    all-on-master = submodule foreach git checkout HEAD
     update-submodules = submodule foreach git pull 
     fuzz = !$HOME/dev/scripts/git-fuzz
 	restore = !$HOME/dev/scripts/git-fuzz r
