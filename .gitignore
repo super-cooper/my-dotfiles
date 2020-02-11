@@ -35,6 +35,7 @@ xorg*
 .config/VirtualBox/
 .config/Yubico/
 .config/balena-etcher-electron/
+.config/bunkus.org/
 .config/configstore/
 .config/dconf/
 .config/deluge/
