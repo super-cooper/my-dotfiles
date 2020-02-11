@@ -26,6 +26,7 @@ setopt HIST_REDUCE_BLANKS
 setopt completealiases
 export COMPLETION_WAITING_DOTS=false
 export VIRTUAL_ENV_DISABLE_PROMPT=1
+tabs -4
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
