@@ -8,5 +8,9 @@ export KRB5_CLIENT_KTNAME=$HOME/mongodb/config/kerberos/krb5-kdc/client-mongodb.
 # aliases
 alias fdfind=fd
 alias resmoke='/home/adam/.virtualenvs/mongo/bin/python3 $HOME/mongodb/mongo/buildscripts/resmoke.py -j14'
+mounthost() {
+    mkdir "/home/adam/mongodb/spawnhost/$2"
+    sudo sshfs -o allow_other,default_permissions,IdentityFile=/home/adam/.ssh/id_rsa "$1":/ "/home/adam/mongodb/spawnhost/$2"
+}
 
 NINJA_STATUS='[%f/%t (%p) %es] '
