@@ -18,6 +18,7 @@
 	restore = !$HOME/dev/scripts/git-fuzz r
     current-branch = !$HOME/dev/scripts/git-current-branch.bash
 	aliases = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
+    hub = "!f() { gh $@; }; f"
 [core]
 	pager = delta --dark
 	excludesfile = ~/.gitignore-global

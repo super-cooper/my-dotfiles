@@ -45,6 +45,7 @@ xorg*
 .config/evolution/
 .config/freerdp/
 .config/gedit/
+.config/gh/
 .config/github/
 .config/gnome-boxes/
 .config/gnome-contacts/
