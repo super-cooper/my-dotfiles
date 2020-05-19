@@ -56,7 +56,7 @@ alias xclip='xclip -selection clipboard'
 # dotfiles version control/backup
 alias dotfiles='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 alias dtf='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
-alias env-update='dtf fetch && dtf pull --rebase && dtf update-submodules && go get -v -u all'
+alias env-update='dtf fetch && dtf pull --rebase && dtf update-submodules && go get -v -u all && gnome-shell-extension-installer --update'
 
 # misc
 alias please='sudo $(fc -ln -1)'
@@ -75,3 +75,7 @@ alias gitignore=gi
 apt-unpin-all() {
     sudo apt-mark showhold | sudo awk '{ print $1, "install" }' | sudo dpkg --set-selections
 }
+
+# minecraft server
+alias memecraft="sudo tmux new-session 'docker logs -f memecraft' \; split-window '/home/adam/.gopath/bin/rcon-cli --config /home/adam/Containers/memecraft/rcon.yml'"
+
