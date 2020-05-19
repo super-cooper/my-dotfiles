@@ -147,7 +147,7 @@ zmodload -i zsh/complist
 fpath=($HOME/.zsh/ $HOME/dev/scripts/zsh $fpath)
 
 # environment
-export PATH=$PATH:/usr/racket/bin:$HOME/dev/scripts:$HOME/.gopath/bin:$HOME/dev/scripts/zsh/zemojify:/sbin:$HOME/.local/bin/:$HOME/adam/.gem/ruby/2.5.0/bin
+export PATH=$PATH:/usr/racket/bin:$HOME/dev/scripts:$HOME/.gopath/bin:$HOME/dev/scripts/zsh/zemojify:/sbin:$HOME/.local/bin/:$HOME/adam/.gem/ruby/2.7.0/bin
 export CLASSPATH=$HOME/Java/lib
 export EDITOR=vim
 export RANGER_LOAD_DEFAULT_RC=false
