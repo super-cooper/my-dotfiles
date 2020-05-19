@@ -12,6 +12,7 @@ Java/
 mongodb/
 Pictures/
 PlayOnLinux*
+Public/
 Videos/
 VirtualBox*
 anaconda3/
@@ -21,21 +22,26 @@ xorg*
 # config ignores
 !.config/Caprine/custom.css
 .config/Atom/
+.config/BraveSoftware/
 .config/Caprine/
 .config/GIMP/
 .config/Hardcode-Tray/
 .config/Insync/
+.config/JetBrains/
 .config/Joplin/
 .config/Mailspring/
 .config/QtProject*
 .config/RescueTime.com/
+.config/Rygel/
 .config/Slack/
 .config/Swiftness/
 .config/Synergy/
+.config/Unknown Organization/
 .config/VirtualBox/
 .config/Yubico/
 .config/balena-etcher-electron/
 .config/bunkus.org/
+.config/chromium/
 .config/configstore/
 .config/dconf/
 .config/deluge/
@@ -52,8 +58,9 @@ xorg*
 .config/gnome-control-center/
 .config/goa*
 .config/google/
-.config/google-chrome/
+.config/google-chrome*/
 .config/gpick/
+.config/gsconnect/
 .config/gtk-3.0/bookmarks
 .config/gtk-3.0/servers
 .config/ibus/
@@ -156,6 +163,7 @@ xorg*
 .WebStorm*
 .xca/
 .yubioath/
+.zoom/
 
 # files
 !.config/discord/settings.json
@@ -176,6 +184,7 @@ xorg*
 .config/qalculate/qalc.history
 .config/Trolltech.conf
 .config/wtf/gcal-auth.json
+.config/zoomus.conf
 .dbshell
 .dmrc
 .evergreen.yml
