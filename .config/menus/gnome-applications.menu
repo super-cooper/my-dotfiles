@@ -11,6 +11,15 @@
 			<Filename>ocaml.desktop</Filename>
 		</Exclude>
 		<AppDir>/home/adam/.local/share/applications</AppDir>
+		<Include>
+			<Filename>gtk3-icon-browser.desktop</Filename>
+		</Include>
+		<Include>
+			<Filename>gtk3-widget-factory.desktop</Filename>
+		</Include>
+		<Include>
+			<Filename>python3.8.desktop</Filename>
+		</Include>
 	</Menu>
 	<Menu>
 		<Name>Office</Name>

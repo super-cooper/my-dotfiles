@@ -1971,10 +1971,10 @@ qt-privacy-ask=0
 [skins2] # Skinnable Interface
 
 # Skin to use (string)
-skins2-last=/home/adam/.config/vlc/vlc_slim_beam_black_skin_v1.5_by_Diagoo1.vlt
+skins2-last=/usr/share/vlc/skins2/default.vlt
 
 # Config of last used skin (string)
-skins2-config=["Hidden" "Panel_0" 0 0 650 360 0]["MainWindow" "MainFrame" 857 243 650 406 1]["PlaylistIcon" "playlisticon_on" 0 0 650 360 0]["VolumeWindow" "VolumeFrame" 94 365 50 160 0]["color" "color1" 0 0 650 360 0]["customplaylist" "customplaylist_off" 0 0 650 360 0]["fileinfo" "fileinfo_off" 0 0 650 360 0]["fullscreenController" "fswindow" 635 987 650 61 0]["menu" "menu_off" 0 0 1 1 0]["playlist" "playlistframe" 100 100 568 382 0]["playlisticons" "playlisticons_1" 0 0 1 1 0]["popup1" "popup1_off" 0 0 1 1 0]["posbar" "posbar_big" 0 0 1 1 0]["pref" "pr" 94 365 650 360 0]["start" "firststart_yes" 0 0 1 1 0]
+skins2-config=["aboutwin" "aboutwinwin-main" 1115 634 330 171 0]["eqwin" "eqwin-main" 1115 634 330 171 0]["fullscreenController" "fsc_normal" 1030 1267 500 130 0]["main" "normal" 518 81 1920 1206 1]["plwin" "plwin-normal" 1158 617 500 350 0]
 
 # Enable transparency effects (boolean)
 skins2-transparency=1
