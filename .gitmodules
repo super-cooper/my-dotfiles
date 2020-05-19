@@ -73,3 +73,6 @@
 [submodule ".vim/bundle/vim-lsp"]
     path = .vim/bundle/vim-lsp
     url = git://github.com/prabirshrestha/vim-lsp.git
+[submodule ".themes/cros-adapta"]
+	path = .themes/cros-adapta
+	url = https://chromium.googlesource.com/chromiumos/third_party/cros-adapta
