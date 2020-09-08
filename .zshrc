@@ -153,6 +153,8 @@ export EDITOR=vim
 export RANGER_LOAD_DEFAULT_RC=false
 export GOPATH=$HOME/.gopath
 export MANPAGER=export MANPAGER="sh -c 'col -b | batcat --tabs=0 -l man -p'"
+#export DOCKER_HOST=tcp://$HOST:2376
+#export DOCKER_TLS_VERIFY=1
 
 # activate anaconda
 source $HOME/.anaconda3/etc/profile.d/conda.sh
