@@ -9,6 +9,9 @@ Downloads/
 GoogleDrive/
 GoogleDriveWork/
 Java/
+Library/
+Music/
+Nextcloud
 mongodb/
 Pictures/
 PlayOnLinux*
@@ -24,12 +27,15 @@ xorg*
 .config/Atom/
 .config/BraveSoftware/
 .config/Caprine/
+.config/Electron/
 .config/GIMP/
 .config/Hardcode-Tray/
 .config/Insync/
 .config/JetBrains/
 .config/Joplin/
 .config/Mailspring/
+.config/NS-RPC/
+.config/Plexamp/
 .config/QtProject*
 .config/RescueTime.com/
 .config/Rygel/
@@ -51,6 +57,7 @@ xorg*
 .config/evolution/
 .config/freerdp/
 .config/gedit/
+.config/gnome-initial-setup-done
 .config/gh/
 .config/github/
 .config/gnome-boxes/
@@ -65,6 +72,7 @@ xorg*
 .config/gtk-3.0/servers
 .config/ibus/
 .config/inkscape/
+.config/joplin
 .config/joplin-desktop/
 .config/kde.org/
 .config/libreoffice/
@@ -72,11 +80,15 @@ xorg*
 .config/mimeapps.list
 .config/nordvpn/
 .config/obs-studio/
+.config/ookla/
 .config/opera/
+.config/pavucontrol.ini
+.config/playstationdiscord/
 .config/pulse/
 .config/qterminal.org/
 .config/solaar/
 .config/spotify/
+.config/systemd/
 .config/Symless/
 .config/teamviewer/
 .config/todoist/
@@ -138,6 +150,7 @@ xorg*
 .mozilla/
 .nemiver/
 .npm/
+.npm-packages/
 .nv/
 .opam/
 .parallel/
@@ -157,6 +170,7 @@ xorg*
 .swiftness/
 .synergy/
 .task/
+.vagrant.d/
 .var/
 .vnc/
 .w3m/
@@ -199,6 +213,7 @@ xorg*
 .multirust
 .node_repl_history
 .nvidia-settings-rc
+.plex-scrobble.toml
 .pulse-cookie
 .python_history
 .rnd
