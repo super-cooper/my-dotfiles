@@ -26,7 +26,6 @@
 [commit]
 	gpgsign = true
 [branch]
-	autoSetupMerge = always
 	autoSetupRebase = always
 [merge]
 	tool = vimdiff
