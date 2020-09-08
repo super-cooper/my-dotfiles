@@ -77,5 +77,7 @@ apt-unpin-all() {
 }
 
 # minecraft server
-alias memecraft="sudo tmux new-session 'docker logs -f memecraft' \; split-window '/home/adam/.gopath/bin/rcon-cli --config /home/adam/Containers/memecraft/rcon.yml'"
+alias memecraft="tmux new-session 'docker logs -f memecraft' \; split-window '/home/adam/.gopath/bin/rcon-cli --config /home/adam/Containers/memecraft/rcon.yml'"
 
+# Nextcloud interaction
+alias nextcloud-occ="docker exec --user www-data nextcloud-app php occ"
