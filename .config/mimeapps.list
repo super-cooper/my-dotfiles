@@ -201,6 +201,7 @@ image/vnd.wap.wbmp=org.gnome.eog.desktop
 image/x-icns=org.gnome.eog.desktop
 application/vnd.debian.binary-package=gdebi.desktop
 application/x-java-archive=java.desktop
+x-scheme-handler/discord-384215522050572288=discord-384215522050572288.desktop
 
 [Added Associations]
 text/html=vivaldi-stable.desktop;
@@ -271,7 +272,7 @@ audio/vorbis=vlc.desktop;rhythmbox.desktop;
 audio/x-vorbis=vlc.desktop;rhythmbox.desktop;
 audio/x-speex=vlc.desktop;
 audio/opus=vlc.desktop;
-audio/flac=vlc.desktop;
+audio/flac=rhythmbox.desktop;vlc.desktop;
 audio/x-flac=vlc.desktop;rhythmbox.desktop;
 audio/x-ms-asf=vlc.desktop;
 audio/x-ms-asx=vlc.desktop;
@@ -404,3 +405,6 @@ x-scheme-handler/sms=org.gnome.Shell.Extensions.GSConnect.desktop;
 x-scheme-handler/tel=org.gnome.Shell.Extensions.GSConnect.desktop;
 application/x-theme=vim.desktop;
 application/x-java-archive=java.desktop;
+application/vnd.appimage=appimagelauncher.desktop;
+application/octet-stream=vim.desktop;
+text/plain=vim.desktop;
