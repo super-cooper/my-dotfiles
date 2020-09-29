@@ -1,5 +1,4 @@
 # Program replacements
-eval $(hub alias -s)
 alias bat=/usr/bin/batcat
 alias cat='bat --italic-text=always --decorations=auto'
 alias find=fdfind
