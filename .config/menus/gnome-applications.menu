@@ -27,5 +27,38 @@
 			<Filename>libreoffice-base.desktop</Filename>
 		</Exclude>
 		<AppDir>/home/adam/.local/share/applications</AppDir>
+		<Exclude>
+			<Filename>calibre-ebook-edit.desktop</Filename>
+		</Exclude>
+	</Menu>
+	<Menu>
+		<Name>Graphics</Name>
+		<Exclude>
+			<Filename>calibre-ebook-viewer.desktop</Filename>
+		</Exclude>
+		<AppDir>/home/adam/.local/share/applications</AppDir>
+		<Exclude>
+			<Filename>calibre-lrfviewer.desktop</Filename>
+		</Exclude>
+	</Menu>
+	<Menu>
+		<Name>System Settings</Name>
+		<AppDir>/home/adam/.local/share/applications</AppDir>
+		<Exclude>
+			<Filename>gnome-color-panel.desktop</Filename>
+		</Exclude>
+		<Exclude>
+			<Filename>gnome-camera-panel.desktop</Filename>
+		</Exclude>
+	</Menu>
+	<Menu>
+		<Name>System</Name>
+		<AppDir>/home/adam/.local/share/applications</AppDir>
+		<Exclude>
+			<Filename>gcm-picker.desktop</Filename>
+		</Exclude>
+		<Exclude>
+			<Filename>org.freedesktop.MalcontentControl.desktop</Filename>
+		</Exclude>
 	</Menu>
 </Menu>
