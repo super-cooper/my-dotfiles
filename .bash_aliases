@@ -1,5 +1,4 @@
 # Program replacements
-alias bat=/usr/bin/batcat
 alias cat='bat --italic-text=always --decorations=auto'
 alias find=fdfind
 alias fd=fdfind
@@ -78,5 +77,6 @@ apt-unpin-all() {
 # minecraft server
 alias memecraft="tmux new-session 'docker logs -f memecraft' \; split-window '/home/adam/.gopath/bin/rcon-cli --config /home/adam/Containers/memecraft/rcon.yml'"
 
-# Nextcloud interaction
+# Docker interaction
 alias nextcloud-occ="docker exec --user www-data nextcloud-app php occ"
+alias grafana="docker exec --user 472 grafana-app grafana-cli"
