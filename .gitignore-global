@@ -7,3 +7,4 @@ venv/
 .gdb_history
 .clangd/
 build/
+.ycm_extra_conf.py
