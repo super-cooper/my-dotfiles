@@ -1,30 +1,30 @@
 #!/bin/bash
 
-get-upstream() {
-    if [ $(git branch -vv | grep ^\* | awk '{print $4}' | cut -c1) != '[' ]; then
-        return
-    fi
-    git b -vv | grep ^\* | awk '{print $4}' | cut -c2- | rev | cut -c2- | rev
-}
+#get-upstream() {
+#    if [ $(git branch -vv | grep ^\* | awk '{print $4}' | cut -c1) != '[' ]; then
+#        return
+#    fi
+#    git b -vv | grep ^\* | awk '{print $4}' | cut -c2- | rev | cut -c2- | rev
+#}
 
 # do nothing if in detached HEAD state
-if [ $(git rev-parse --abbrev-ref --symbolic-full-name HEAD) == "HEAD" ]; then
-    exit 0
-fi
+#if [ $(git rev-parse --abbrev-ref --symbolic-full-name HEAD) == "HEAD" ]; then
+#    exit 0
+#fi
 
 # log merge point
-if [ -z "$(git config branch.$(git current-branch).root)" ]; then
-    git config branch.$(git current-branch).root $(git show-ref $(git current-branch) -s)
-    echo "Configured branch root as " $(git show-ref $(git current-branch))
-fi
+#if [ -z "$(git config branch.$(git current-branch).root)" ]; then
+#    git config branch.$(git current-branch).root $(git show-ref $(git current-branch) -s)
+#    echo "Configured branch root as " $(git show-ref $(git current-branch))
+#fi
 
 # if tracking local branch, set to track upstream equivalent
-upstream=$(get-upstream)
-if ! [[ $upstream =~ 'origin/' ]]; then
-    if [ z$upstream == zmaster ] || [[ z$upstream =~ 'zv4\.' ]] || [[ z$upstream =~ z'v3\.' ]]; then
-        git branch --set-upstream-to origin/$upstream
-    elif [ -z "$upstream" ]; then
-        git branch --set-upstream-to $(git b -r --contains $(git show-ref $(git current-branch) -s) | tail -n1)
-    fi
-fi
+#upstream=$(get-upstream)
+#if ! [[ $upstream =~ 'origin/' ]]; then
+#    if [ z$upstream == zmaster ] || [[ z$upstream =~ 'zv4\.' ]] || [[ z$upstream =~ z'v3\.' ]]; then
+#        git branch --set-upstream-to origin/$upstream
+#    elif [ -z "$upstream" ]; then
+#        git branch --set-upstream-to $(git b -r --contains $(git show-ref $(git current-branch) -s) | tail -n1)
+#    fi
+#fi
 

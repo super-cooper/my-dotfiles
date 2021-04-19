@@ -1,1 +1,2 @@
-git amend -a
+git amend -a --no-edit --date=now
+
