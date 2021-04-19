@@ -1,3 +1,0 @@
-cd ~/dev/mongodb/kernel-tools && git pull origin master
-cd ~/dev/mongodb/mongo/src/mongo/db/modules/ninja && git pull origin master
-cd ~/dev/mongodb/iteng-jira-oauth && git pull origin master
