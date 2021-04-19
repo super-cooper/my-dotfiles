@@ -2,9 +2,8 @@ code : /home/adam/dev
 docs : /home/adam/Documents
 gdrive : /home/adam/GoogleDrive
 dev : /home/adam/dev
-scripts : /home/adam/dev/scripts
-dl : /home/adam/Downloads
+nextcloud : /home/adam/Containers/Nextcloud
 containers : /home/adam/Containers
+dl : /home/adam/Downloads
+scripts : /home/adam/dev/scripts
 home : /home/adam
-enterprise : /home/adam/dev/mongodb/enterprise
-mongo : /home/adam/dev/mongodb/mongo
