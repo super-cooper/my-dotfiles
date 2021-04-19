@@ -1,5 +1,5 @@
 ﻿###
-###  vlc 3.0.10
+###  vlc 3.0.11.1
 ###
 
 ###
@@ -52,8 +52,17 @@
 # Dither depth override (0 = framebuffer depth) (integer)
 #dither-depth=0
 
-# Tone-mapping desaturation coefficient (float)
-#tone-mapping-desat=0.500000
+# Desaturation strength (float)
+#desat-strength=0.750000
+
+# Desaturation exponent (float)
+#desat-exponent=1.500000
+
+# Desaturation base (float)
+#desat-base=0.180000
+
+# Maximum brightness boost (float)
+#max-boost=0.000000
 
 [xcb_xv] # XVideo output (XCB)
 
@@ -119,8 +128,17 @@
 # Dither depth override (0 = framebuffer depth) (integer)
 #dither-depth=0
 
-# Tone-mapping desaturation coefficient (float)
-#tone-mapping-desat=0.500000
+# Desaturation strength (float)
+#desat-strength=0.750000
+
+# Desaturation exponent (float)
+#desat-exponent=1.500000
+
+# Desaturation base (float)
+#desat-base=0.180000
+
+# Maximum brightness boost (float)
+#max-boost=0.000000
 
 [xcb_window] # X11 video window (XCB)
 
@@ -674,6 +692,14 @@
 # UTF-8 subtitle autodetection (boolean)
 #subsdec-autodetect-utf8=1
 
+[dav1d] # Dav1d video decoder
+
+# Frames Threads (integer)
+#dav1d-thread-frames=0
+
+# Tiles Threads (integer)
+#dav1d-thread-tiles=0
+
 [a52] # ATSC A/52 (AC-3) audio decoder
 
 # A/52 dynamic range compression (boolean)
@@ -1061,7 +1087,7 @@
 #sout-avi-subject=
 
 # Encoder (string)
-#sout-avi-encoder=VLC Media Player - 3.0.10 Vetinari
+#sout-avi-encoder=VLC Media Player - 3.0.11.1 Vetinari
 
 # Keywords (string)
 #sout-avi-keywords=
@@ -1716,6 +1742,58 @@
 # Inputs list (string)
 #concat-list=
 
+[vnc] # VNC client access
+
+# Username (string)
+#rfb-user=
+
+# Password (string)
+#rfb-password=
+
+# X.509 Certificate Authority (string)
+#rfb-x509-ca=
+
+# X.509 Certificate Revocation List (string)
+#rfb-x509-crl=
+
+# X.509 Client certificate (string)
+#rfb-x509-client-cert=
+
+# X.509 Client private key (string)
+#rfb-x509-client-key=
+
+# Frame rate (float)
+#rfb-fps=5.000000
+
+# Frame buffer depth (string)
+#rfb-chroma=RV32
+
+# Compression level (integer)
+#rfb-compress-level=0
+
+# Image quality (integer)
+#rfb-quality-level=9
+
+[xcb_screen] # Screen capture (with X11/XCB)
+
+# Frame rate (float)
+#screen-fps=2.000000
+
+# Region left column (integer)
+#screen-left=0
+
+# Region top row (integer)
+#screen-top=0
+
+# Capture region width (integer)
+#screen-width=0
+
+# Capture region height (integer)
+#screen-height=0
+
+# Follow the mouse (boolean)
+#screen-follow-mouse=0
+
 [linsys_sdi] # SDI Input
 
 # Link # (integer)
@@ -2084,23 +2162,6 @@ skins2-transparency=1
 
 # Stream public (boolean)
 #sout-shout-public=0
-
-[access_output_srt] # SRT stream output
-
-# SRT chunk size (bytes) (integer)
-#chunk-size=1316
-
-# Return poll wait after timeout milliseconds (-1 = infinite) (integer)
-#poll-timeout=100
-
-# SRT latency (ms) (integer)
-#latency=125
-
-# Password for stream encryption (string)
-#passphrase=
-
-# Crypto key length in bytes (integer)
-#key-length=16
 
 [file] # File stream output
 
