@@ -27,6 +27,7 @@ setopt completealiases
 export COMPLETION_WAITING_DOTS=false
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 tabs -4
+export BASH_ENV="$HOME/.bashrc"
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
@@ -74,7 +75,7 @@ antigen apply
 export FZF_DEFAULT_OPTS='--ansi'
 export FZF_DEFAULT_COMMAND='fdfind --color always --follow'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_CTRL_T_OPTS='--preview "[[ -d {} ]] && colorls --color=always -lh --git-status {} || batcat --color always --italic-text always --decorations never --pager never --line-range :1000 {}"'
+export FZF_CTRL_T_OPTS='--preview "[[ -d {} ]] && colorls --color=always -lh --git-status {} || /usr/bin/bat --color always --italic-text always --decorations never --pager never --line-range :1000 {}"'
 export FZF_ALT_C_COMMAND='fdfind --color always --type d --follow'
 export FZF_ALT_C_OPTS='--preview "colorls --color=always -lh --git-status {}"'
 export FZF_MARKS_COMMAND=$'fzf --height 40% --reverse --preview "echo {} | cut -d \\  -f3- | tr -d \'\\n\' | xargs -0 colorls -lh --color=always --git-status"'
@@ -82,7 +83,7 @@ export FZF_COMPLETION_OPTS=$'--preview "\
     if [[ -d {} ]]; then \
         colorls --color=always -lh --git-status {} \
     elif [[ -f {} ]]; then \
-        batcat --color always --italic-text always --decorations never --pager never --line-range :1000 {} \
+        /usr/bin/bat --color always --italic-text always --decorations never --pager never --line-range :1000 {} \
     elif [[ -v {} ]]; then \
         eval \'tmp=\\${}\' \
         echo $tmp \
@@ -90,9 +91,9 @@ export FZF_COMPLETION_OPTS=$'--preview "\
         pstree -sUH $(echo {} | awk \'{ print $2 }\') $(echo {} | awk \'{ print $2 }\') \
     elif [[ -n $(grep \'Host {}\' $HOME/.ssh/config) ]]; then \
         start=$(grep -n \'Host {}\' $HOME/.ssh/config | cut -f1 -d:) \
-        batcat --color always --italic-text always -l ssh_config --decorations never --pager never --line-range $start:$(( $start + 2 )) $HOME/.ssh/config \
+        /usr/bin/bat --color always --italic-text always -l ssh_config --decorations never --pager never --line-range $start:$(( $start + 2 )) $HOME/.ssh/config \
     else \
-        batcat --color always --italic-text always --decorations never --pager never /etc/hosts | grep --color=always "{}" \
+        /usr/bin/bat --color always --italic-text always --decorations never --pager never /etc/hosts | grep --color=always "{}" \
     fi"'
 
 _fzf_compgen_path() {
@@ -191,4 +192,3 @@ bindkey "^s" sudo-command-line
 
 # import aliases
 [ -f $HOME/.bash_aliases ] && source $HOME/.bash_aliases
-[ -f $HOME/.mongo_aliases ] && source $HOME/.mongo_aliases
