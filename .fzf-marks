@@ -1,9 +1,10 @@
 code : /home/adam/dev
 docs : /home/adam/Documents
-gdrive : /home/adam/GoogleDrive
 dev : /home/adam/dev
-nextcloud : /home/adam/Containers/Nextcloud
-containers : /home/adam/Containers
-dl : /home/adam/Downloads
+nextcloud : /home/adam/Nextcloud
 scripts : /home/adam/dev/scripts
+containers : /home/adam/Containers
+chameleon : /home/adam/dev/chameleon
 home : /home/adam
+pub : /home/adam/Public
+dl : /home/adam/Downloads
