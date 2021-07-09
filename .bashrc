@@ -1,9 +1,9 @@
 #!/bin/bash
 
-if [[ $EUID -ne 0 ]]; then
+#if [[ $EUID -ne 0 ]]; then
     # WakaTime bash plugin
-    source $HOME/.wakatime.sh
-fi
+#    source $HOME/.wakatime.sh
+#fi
 # git decorator
 source /usr/lib/git-core/git-sh-prompt
 GIT_PS1_SHOWDIRTYSTATE=1
@@ -124,3 +124,4 @@ fi
 
 # import bash aliases
 [ -f $HOME/.bash_aliases ] && source $HOME/.bash_aliases
+[ -f $HOME/.chameleon_aliases ] && source $HOME/.chameleon_aliases
