@@ -16,6 +16,7 @@ mongodb/
 Pictures/
 PlayOnLinux*
 Public/
+Templates/
 Videos/
 VirtualBox*
 anaconda3/
@@ -23,6 +24,7 @@ lib/
 xorg*
 
 # config ignores
+.config/Authenticator/
 !.config/Caprine/custom.css
 .config/Atom/
 .config/BraveSoftware/
@@ -47,6 +49,8 @@ xorg*
 .config/Yubico/
 .config/balena-etcher-electron/
 .config/bunkus.org/
+.config/calibre/
+.config/cef_user_data/
 .config/chromium/
 .config/configstore/
 .config/dconf/
@@ -56,6 +60,7 @@ xorg*
 .config/eog/
 .config/evolution/
 .config/freerdp/
+.config/gcloud/
 .config/gedit/
 .config/gnome-initial-setup-done
 .config/gh/
@@ -74,6 +79,7 @@ xorg*
 .config/inkscape/
 .config/joplin
 .config/joplin-desktop/
+.config/kconf_updaterc
 .config/kde.org/
 .config/libreoffice/
 .config/libvirt/
@@ -83,6 +89,7 @@ xorg*
 .config/ookla/
 .config/opera/
 .config/pavucontrol.ini
+.config/pipewire-media-session/
 .config/playstationdiscord/
 .config/pulse/
 .config/qterminal.org/
@@ -99,6 +106,7 @@ xorg*
 # SSH Keys
 .ssh/id_dsa*
 .ssh/id_rsa*
+.ssh/id_chameleon.txt
 
 # dirs
 !.local/share/gnome-musc/playlists/
@@ -121,6 +129,7 @@ xorg*
 .dbus/
 .docker/
 .dotfiles/
+.filebot/
 .fonts/
 .forgit/
 .gconf/
@@ -139,14 +148,18 @@ xorg*
 .IntelliJIdea*
 .ipython/
 .java/
+.jdks/
 .jira*
 .joplin/
 .joplin-bin/
+.kube/
 .local/bin/
 .local/lib/
 .local/share/
+.local/state/gh
 .m2/
 .markdownNavigator/
+.minikube/
 .mozilla/
 .nemiver/
 .npm/
@@ -176,6 +189,7 @@ xorg*
 .w3m/
 .WebStorm*
 .xca/
+.xournal/
 .yubioath/
 .zoom/
 
@@ -202,11 +216,13 @@ xorg*
 .dbshell
 .dmrc
 .evergreen.yml
+.forward
 .gdb_history
 .github_token
 .gksu*
 .gtk-bookmarks
 .gtkrc.bak
+.install4j
 .ICEauthority
 .ldaprc
 .lesshst
@@ -227,6 +243,7 @@ xorg*
 .viminfo
 .virtualenvs/
 .wakatime.*
+.wakatime/wakatime-cli/
 .wget-hsts
 .x11vnc*
 .Xauthority
