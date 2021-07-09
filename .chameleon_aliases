@@ -1,0 +1,30 @@
+#!/bin/zsh
+
+alias chi="$HOME/.local/bin/cc"
+alias chi-replacekey="$HOME/.local/bin/cc-replacekey"
+alias chi-ssh="$HOME/.local/bin/cc-ssh"
+alias chi-vault="$HOME/.local/bin/cc-vault"
+
+export CHAMELEON_EMAIL="adamcooper@uchicago.edu"
+export CHAMELEON_SSH_ID="$HOME/.ssh/id_rsa.1.pub"
+export CHAMELEON_PASSWORD_FILE="$HOME/.ssh/id_chameleon.txt"
+
+export TACC_USER="cooper" # Defaults to $USER
+# export TACC_SSH_ID="<path/to/id>" # Defaults to $CHAMELEON_SSH_ID
+# export TACC_JUMP_HOST="<fqdn of jump host>" # Defaults to staff.chameleon.tacc.utexas.edu
+
+export UC_USER=${CHAMELEON_EMAIL}
+# export UC_SSH_ID="<path/to/id>" # Defaults to $CHAMELEON_SSH_ID
+
+export MCS_USER=${CHAMELEON_EMAIL}
+# export MCS_SSH_ID="<path/to/id>" # Defaults to $CHAMELEON_SSH_ID
+# export MCS_JUMP_HOST="<fqdn of jump host>" # Defaults to login.mcs.anl.gov
+
+export CELS_USER=${CHAMELEON_EMAIL}
+# export CELS_SSH_ID="<path/to/id>" # Defaults to $CHAMELEON_SSH_ID
+# export CELS_JUMP_HOST="<fqdn of jump host>" # Defaults to logins.cels.anl.gov
+
+export NU_USER="cooper" # Defaults to $USER
+# export NU_SSH_ID="<path/to/id>" # Defaults to $CHAMELEON_SSH_ID
+
+export PATH=$PATH:$HOME/dev/scripts/chameleon
